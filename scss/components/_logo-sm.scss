@@ -1,0 +1,16 @@
+/*logo-sm*/
+.logo-sm {
+  height: 53px;
+  width: 39px;
+
+  cursor: pointer;
+}
+
+.logo-sm-red {
+  @extend .logo-sm;
+
+  path {
+    fill: $color-red-radical;
+  }
+}
+/*/logo-sm*/

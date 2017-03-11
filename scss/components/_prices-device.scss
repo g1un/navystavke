@@ -1,0 +1,32 @@
+/*prices-device*/
+.prices-device {
+
+  &__logo {
+    margin-bottom: 58px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 65px;
+  }
+
+  &__link {
+
+    &:hover,
+    &.active {
+      text-decoration: underline;
+    }
+  }
+
+  //iPhone 5 landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    width: $block-width;
+
+    margin: 0 auto;
+
+    background: #fff;
+  }
+}
+/*/prices-device*/

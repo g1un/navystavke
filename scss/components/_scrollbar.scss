@@ -1,0 +1,19 @@
+/*scrollbar*/
+.scrollbar {
+
+  &__up {
+    display: block;
+
+    width: 0;
+    height: 0;
+
+    border-bottom: 12px solid $color-torea-bay;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+  }
+
+  &__down {
+    @extend .triangle-down;
+  }
+}
+/*/scrollbar*/

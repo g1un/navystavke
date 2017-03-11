@@ -1,0 +1,47 @@
+/*login*/
+.login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+
+  padding-bottom: 66px;
+
+  background: $color-red-radical;
+
+  transition: top .5s;
+
+  &__logo {
+    width: 40px;
+    height: 54px;
+  }
+
+  &__header {
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    margin-bottom: 80px;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__error {
+    position: absolute;
+    top: -44px;
+  }
+
+  &__has-error {
+    border-color: #fff;
+  }
+
+  //iPad landscape
+  @media only screen and (min-width: 1024px) {
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+/*/login*/

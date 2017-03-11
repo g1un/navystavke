@@ -1,0 +1,281 @@
+/*intro*/
+.intro {
+
+  &__options {
+    overflow: auto;
+
+    &._about {
+      //display: none;
+    }
+  }
+
+  &__buttons {
+    min-height: 48px;
+
+    background: $color-torea-bay;
+  }
+
+  &__menu-btn {
+    margin-top: 15px;
+    margin-left: 32px;
+
+    float: left;
+  }
+
+  &__enter-btn {
+    margin-top: 11px;
+    margin-right: 32px;
+
+    float: right;
+  }
+
+  &__item {
+
+    &.slide-down {
+      top: 0;
+      transition: top 1s;
+    }
+  }
+
+  &__device-type {
+    box-sizing: content-box;
+
+    background: #fff;
+  }
+
+  &._terms {
+
+    .intro {
+
+      &__logo {
+        margin-top: 10px;
+        margin-right: 32px;
+        float: right;
+
+        width: 20px;
+        height: 27px;
+
+        path {
+          fill: #fff;
+        }
+      }
+
+      &__options {
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: auto;
+      }
+
+      &__device-type {
+        display: none;
+      }
+    }
+  }
+
+  &._about {
+
+    .intro {
+
+      &__logo {
+        margin-top: 10px;
+        margin-right: 32px;
+        float: right;
+
+        width: 20px;
+        height: 27px;
+
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  //iPad portrait & width >= 480
+  @media only screen and (min-width: 768px) {
+
+    &__device-type {
+      width: $block-width;
+
+      //margin: 96px auto 0;
+    }
+  }
+
+  //iPad landscape
+  @media only screen and (min-width: 1024px) {
+
+    position: relative;
+
+    &__buttons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+
+      min-height: 0;
+      padding: 33px 0 0;
+
+      background: transparent;
+
+      .container-m {
+        width: 960px;
+        margin: 0 auto;
+      }
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__menu-btn {
+      margin: 0;
+    }
+
+    &__enter-btn {
+      margin: 0;
+
+      font-size: $fz-md;
+      color: $color-torea-bay;
+    }
+
+    &__options {
+      display: flex;
+      align-items: center;
+
+      //width: $block-ipad;
+      height: 736px;
+
+      margin: 0 auto;
+
+      position: relative;
+
+      &._about {
+        display: flex;
+      }
+    }
+
+    &__wrapper {
+      position: relative;
+      z-index: 2;
+
+      overflow: hidden;
+    }
+
+    //&__device-type {
+    //  margin: 0;
+    //
+    //  background: #fff;
+    //}
+
+    &._terms {
+
+      .intro {
+
+        &__buttons {
+          padding: 63px 0 0;
+        }
+
+        &__wrapper {
+          min-width: 354px;
+          margin-top: 36px;
+        }
+
+        &__text {
+          margin-top: 116px;
+          margin-right: 48px;
+        }
+
+        &__device-type {
+          display: block;
+
+          border: 1px solid $color-torea-bay;
+        }
+      }
+    }
+  }
+
+  //Laptop >= 1280
+  @media only screen and (min-width: $width-lg) {
+
+    &__buttons {
+
+      .container-m {
+        width: $menu-lg;
+      }
+    }
+
+    &__enter-btn {
+      margin: 0 114px 0 0;
+    }
+
+    &__options {
+      //width: $container-lg;
+      height: $width-lg / 2;
+    }
+  }
+
+  //iPhone 5 landscape
+  //@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  //
+  //  &__options {
+  //    display: flex;
+  //    align-items: center;
+  //    justify-content: center;
+  //    height: 100%;
+  //  }
+  //
+  //  &__device-type {
+  //    margin: 0;
+  //  }
+  //
+  //  &__device-type {
+  //    width: $block-width;
+  //
+  //    background: #fff;
+  //  }
+  //}
+
+  //iPhone 6 landscape
+  //@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  //
+  //  &__options {
+  //    display: flex;
+  //    align-items: center;
+  //    justify-content: center;
+  //    height: 100%;
+  //  }
+  //
+  //  &__device-type {
+  //    margin: 0;
+  //  }
+  //
+  //  &__device-type {
+  //    width: $block-width;
+  //
+  //    background: #fff;
+  //  }
+  //}
+
+  //iPhone 6+ landscape
+  //@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  //
+  //  &__options {
+  //    display: flex;
+  //    align-items: center;
+  //    justify-content: center;
+  //    height: 100%;
+  //  }
+  //
+  //  &__device-type {
+  //    margin: 0;
+  //  }
+  //
+  //  &__device-type {
+  //    width: $block-width;
+  //
+  //    background: #fff;
+  //  }
+  //}
+}
+/*/intro*/

@@ -1,0 +1,134 @@
+/*gift*/
+.gift {
+  padding-top: 192px;
+
+  background: transparent url('../img/sec-5-slide-1.jpg') no-repeat top center;
+  background-size: auto 192px;
+
+  overflow: auto;
+
+  &__info {
+    margin-bottom: 29px;
+  }
+
+  &__wrapper {
+    box-sizing: content-box;
+  }
+
+  //iPad portrait & width >= 480
+  @media only screen and (min-width: 480px) {
+    padding-top: 0;
+    height: 736px;
+
+    background-size: cover;
+
+    &__wrapper {
+      width: $block-width;
+
+      margin: 96px auto 0;
+
+      background: #fff;
+    }
+  }
+
+  //iPad landscape
+  @media only screen and (min-width: 1024px) {
+
+    .container-m {
+      width: $block-ipad;
+
+      margin: 0 auto;
+    }
+
+    &__wrapper {
+      margin: 96px 0 0;
+    }
+  }
+
+  //Laptop >= 1280
+  @media only screen and (min-width: $width-lg) {
+    height: 640px;
+
+    .container-m{
+      width: $container-lg;
+    }
+
+    &__wrapper {
+      margin-top: 48px;
+    }
+  }
+
+  //Laptop >= 1440
+  @media only screen and (min-width: $width-xlg) {
+    height: 736px;
+
+    &__wrapper {
+      margin-top: 96px;
+    }
+  }
+
+  //Laptop >= 1920
+  @media only screen and (min-width: $width-xlg) {
+    height: 928px;
+
+    &__wrapper {
+      margin-top: 192px;
+    }
+  }
+
+  //iPhone 5 landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    padding-top: 0;
+
+    height: 607px;
+
+    background-size: auto;
+
+    &__wrapper {
+      width: $block-width;
+
+      margin: 32px auto 0;
+
+      background: #fff;
+    }
+  }
+
+  //iPhone 6 portrait
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    padding-top: 240px;
+    background-size: auto 240px;
+  }
+
+  //iPhone 6 landscape
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    height: 607px;
+    padding-top: 0;
+
+    background-size: auto;
+
+    &__wrapper {
+      width: $block-width;
+
+      margin: 32px auto 0;
+
+      background: #fff;
+    }
+  }
+
+  //iPhone 6+ landscape
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    height: 607px;
+    padding-top: 0;
+
+    background-size: auto;
+
+    &__wrapper {
+      width: $block-width;
+
+      margin: 32px auto 0;
+
+      background: #fff;
+    }
+  }
+}
+/*/gift*/

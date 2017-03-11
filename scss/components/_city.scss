@@ -1,0 +1,39 @@
+/*city*/
+.city {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+
+  padding-bottom: 149px;
+
+  background: $color-torea-bay;
+
+  transition: top .5s;
+
+  &__close {
+
+    rect {
+      fill: $color-red-radical;
+    }
+  }
+
+  //iPad landscape
+  @media only screen and (min-width: 1024px) {
+    padding-bottom: 0;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  //iPhone 5 landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    padding-bottom: 56px;
+  }
+
+  //iPhone 6 landscape
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    padding-bottom: 56px;
+  }
+}
+/*/city*/

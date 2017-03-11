@@ -1,0 +1,62 @@
+/*triangle*/
+.triangle-down {
+  display: block;
+
+  width: 0;
+  height: 0;
+
+  border-top: 12px solid $color-torea-bay;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.triangle-left {
+  display: block;
+
+  width: 0;
+  height: 0;
+
+  background: transparent;
+
+  padding: 0;
+
+  border-right: 12px solid $color-torea-bay;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+
+  border-left: none;
+
+  outline: none;
+
+  font-size: 0;
+
+  &--disabled {
+    border-right-color: $color-alto;
+  }
+}
+
+.triangle-right {
+  display: block;
+
+  width: 0;
+  height: 0;
+
+  background: transparent;
+
+  padding: 0;
+
+  border-left: 12px solid $color-torea-bay;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+
+  border-right: none;
+
+  outline: none;
+
+  font-size: 0;
+
+  &--disabled {
+    border-left-color: $color-alto;
+  }
+}
+/*triangle*/

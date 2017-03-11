@@ -1,0 +1,18 @@
+.content-title {
+	margin: 0 auto 11px;
+	//max-width: 680px;
+	@include font-fpt-book();
+	font-size: 14px;
+	line-height: 1.2em;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: underline;
+
+	//@media (max-width: 1919px) {
+	//	max-width: 636px;
+	//}
+	//
+	//@media (max-width: 767px) {
+	//	margin-bottom: 8px;
+	//}
+}

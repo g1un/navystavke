@@ -1,0 +1,71 @@
+.uni-program {
+	font-size: 0;
+	width: 455px;
+	min-height: 320px;
+	padding-bottom: 20px;
+
+	&__title {
+		display: inline-block;
+		vertical-align: top;
+		width: 58%;
+		margin-right: 4.5%;
+		@include font-rp-reg();
+		font-size: 34px;
+		line-height: 1.05em;
+		font-weight: 400;
+		text-transform: uppercase;
+		text-align: right;
+	}
+
+	&__desc {
+		display: inline-block;
+		vertical-align: top;
+		width: 37.5%;
+		margin-top: 23px;
+		padding-top: 22px;
+		@include font-gp-pro();
+		font-size: 16px;
+		line-height: 1.2em;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 25px;
+			height: 6px;
+			background: #2a9d5c;
+		}
+	}
+
+	@media (max-width: 1365px) {
+		width: 47.5%;
+		min-height: 250px;
+	}
+
+	@media (max-width: 999px) {
+		width: 100%;
+		min-height: 0;
+		padding-bottom: 40px;
+	}
+
+	@media (max-width: 767px) {
+
+		&__title {
+			width: 100%;
+			margin: 0;
+			text-align: left;
+		}
+
+		&__desc {
+			margin-top: 10px;
+			padding-top: 10px;
+			width: 100%;
+
+			&:before {
+				right: 0;
+			}
+		}
+	}
+}

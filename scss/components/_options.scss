@@ -1,0 +1,37 @@
+/*options*/
+.options {
+  position: static;
+
+  //iPad portrait & width >= 480
+  @media only screen and (min-width: 480px) {
+    height: 736px;
+  }
+
+  //Laptop >= 1280
+  @media only screen and (min-width: $width-lg) {
+    height: 640px;
+  }
+
+  //iPhone 5 landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    height: 607px;
+  }
+
+  //iPhone 6 landscape
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    height: 607px;
+  }
+
+  //iPhone 6+ landscape
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    height: 607px;
+  }
+}
+
+._terms {
+
+  .options {
+    height: auto;
+  }
+}
+/*/options*/

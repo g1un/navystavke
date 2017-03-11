@@ -1,0 +1,55 @@
+/*menu*/
+.menu {
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  //z-index: 101;
+  position: relative;
+
+  //padding-bottom: 56px;
+  padding: 0 32px;
+
+  border: none;
+  box-shadow: none;
+  background: $color-torea-bay;
+
+  //transition: top .5s;
+
+  //&__nav {
+    //margin-bottom: 27px;
+  //}
+
+  &__item {
+    line-height: 3em;
+  }
+
+  &__link {
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 14px;
+    right: 32px;
+  }
+
+  //iPad landscape
+  //@media only screen and (min-width: 1024px) {
+  //  box-sizing: border-box;
+  //  height: 100%;
+  //}
+
+  //iPhone SE, 6, 6+ landscape
+  //@media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  //  padding-top: 10px;
+  //
+  //  &__item {
+  //    line-height: 2em;
+  //  }
+  //}
+}
+/*/menu*/

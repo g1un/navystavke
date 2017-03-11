@@ -1,0 +1,27 @@
+/*slider*/
+.slider-nav {
+  width: 66px;
+
+  margin: 0 auto;
+
+  &__prev {
+    float: left;
+
+    @extend .triangle-left;
+
+    &.slick-disabled {
+      @extend .triangle-left--disabled;
+    }
+  }
+
+  &__next {
+    float: right;
+
+    @extend .triangle-right;
+
+    &.slick-disabled {
+      @extend .triangle-right--disabled;
+    }
+  }
+}
+/*slider*/

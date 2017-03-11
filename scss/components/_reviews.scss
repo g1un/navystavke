@@ -1,0 +1,202 @@
+/*reviews*/
+.reviews {
+  padding-bottom: 46px;
+
+  &__title {
+    width: 256px;
+    
+    margin: 20px auto 25px;
+  }
+
+  &__wrapper {
+    padding: 0 0 48px;
+    width: $block-width;
+
+    margin: 0 auto;
+  }
+
+  &__img {
+    max-height: 128px;
+
+    margin-bottom: 15px;
+  }
+
+  &__author {
+    margin-bottom: 10px;
+  }
+
+  &__company {
+    margin-bottom: 3px;
+  }
+
+  &._about {
+
+    .reviews {
+
+      &__title {
+        margin-bottom: 96px;
+      }
+    }
+  }
+
+  //iPad portrait
+  @media only screen and (min-width: 768px) {
+
+    &__title {
+      width: 2 * $block-width + 33px;
+
+      margin-top: 62px;
+      margin-bottom: 26px;
+    }
+
+    &__slider {
+      width: 2 * $block-width + 2 * 33px;
+
+      margin: 0 auto;
+    }
+
+    &__wrapper {
+      padding-bottom: 80px;
+    }
+  }
+
+  //iPad landscape
+  @media only screen and (min-width: 1024px) {
+
+    &__title {
+      width: 2 * $block-width + 222px;
+
+      margin-top: 62px;
+      margin-bottom: 26px;
+    }
+
+    &__slider {
+      width: 2 * $block-width + 2 * 222px;
+
+      margin: 0 auto;
+    }
+
+    &__wrapper {
+      padding-bottom: 80px;
+    }
+  }
+
+  //Laptop >= 1280
+  @media only screen and (min-width: $width-lg) {
+
+    &__title {
+      width: 3 * $block-width + 2 * 128px;
+    }
+
+    &__slider {
+      width: 3 * $block-width + 3 * 128px;
+    }
+
+  }
+
+  //iPhone 6+ landscape
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
+    &__title {
+      margin-top: 46px;
+
+      text-align: center;
+    }
+
+    &__wrapper {
+      width: 2 * $block-width + 38px;
+      box-sizing: border-box;
+      padding-left: 60px;
+
+      margin: 0 auto 32px;
+    }
+
+    &__img,
+    &__author,
+    &__company {
+      float: left;
+      clear: left;
+    }
+
+    &__company {
+      margin-bottom: 0;
+    }
+
+    &__text {
+      width: $block-width;
+
+      margin-left: 234px;
+    }
+  }
+
+  //iPhone 6 landscape
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+    &__title {
+      margin-top: 46px;
+
+      text-align: center;
+    }
+
+    &__wrapper {
+      width: 2 * $block-width + 38px;
+      box-sizing: border-box;
+      padding-left: 60px;
+
+      margin: 0 auto 32px;
+    }
+
+    &__img,
+    &__author,
+    &__company {
+      float: left;
+      clear: left;
+    }
+
+    &__company {
+      margin-bottom: 0;
+    }
+
+    &__text {
+      width: $block-width;
+
+      margin-left: 234px;
+    }
+  }
+
+  //iPhone 5 landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+    &__title {
+      margin-top: 20px;
+
+      text-align: left;
+    }
+
+    &__wrapper {
+      width: $block-width;
+      box-sizing: content-box;
+      padding-left: 0;
+
+      margin: 0 auto;
+    }
+
+    &__img,
+    &__author,
+    &__company {
+      float: none;
+      clear: none;
+    }
+
+    &__company {
+      margin-bottom: 3px;
+    }
+
+    &__text {
+      width: auto;
+
+      margin-left: 0;
+    }
+  }
+}
+/*/reviews*/

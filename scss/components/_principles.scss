@@ -1,0 +1,480 @@
+.principles {
+	padding-bottom: 48px;
+	margin-bottom: 94px;
+	position: relative;
+
+	&__container {
+		position: relative;
+	}
+
+	&__title {
+		margin: 0 auto 57px;
+		max-width: 680px;
+
+		&._company {
+			max-width: 100%;
+			margin-bottom: 90px;
+			@include font-fpt-bold();
+			font-size: 40px;
+			line-height: 1em;
+			font-weight: 400;
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+
+	&__photo {
+		max-width: 1058px;
+		margin: 0 auto 40px;
+		line-height: 0;
+		text-align: center;
+
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		img {
+			max-width: 100%;
+			float: right;
+			margin-right: -71px;
+		}
+	}
+
+	&__list {
+		margin: 0 auto 106px;
+		max-width: 800px;
+		text-align: left;
+	}
+
+	&__item {
+		width: 340px;
+		position: relative;
+		z-index: 1;
+
+		&._trust {
+			margin: 0 0 75px;
+		}
+
+		&._responsibility {
+			margin: 100px 0 79px;
+		}
+
+		&._opennes {
+			margin-top: 75px;
+		}
+
+		&._uncompromising {
+			margin-top: 65px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&._left {
+			float: left;
+		}
+
+		&._right {
+			float: right;
+		}
+
+		&._image {
+			margin: 0;
+			z-index: 0;
+
+			&:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+
+			&._left {
+
+				img {
+					margin-left: -129px;
+				}
+			}
+
+			&._right {
+
+				img {
+					float: right;
+					margin-right: -116px;
+				}
+			}
+		}
+
+		h4 {
+			@include font-fpt-cond-bold();
+			font-size: 26px;
+			line-height: 1.1em;
+			font-weight: 400;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+			position: relative;
+
+			img,
+			svg {
+				position: absolute;
+				top: 7px;
+				left: -25px;
+				display: inline-block;
+				vertical-align: baseline;
+				width: 16px;
+			}
+		}
+
+		p {
+			@include font-fpt-book();
+			font-size: 14px;
+			line-height: 1.15em;
+
+			span {
+				background: #f8ea1b;
+			}
+		}
+	}
+
+	&__more {
+		text-align: center;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+
+		&-wrapper {
+			position: relative;
+			margin: 0 auto;
+			width: 100%;
+			height: 100%;
+			max-width: 1824px;
+		}
+
+		span {
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			top: 50%;
+			left: 50%;
+			z-index: 1;
+			filter: blur(9px);
+
+			&:nth-child(1) {
+				margin-top: -35.5%;
+				margin-left: 28.5%;
+				border-bottom: 84px solid #f8ea1b;
+				border-right: 84px solid #f8ea1b;
+				border-left: 84px solid transparent;
+				border-top: 84px solid transparent;
+			}
+
+			&:nth-child(2) {
+				margin-top: -8.1%;
+				margin-left: -36.3%;
+				border-bottom: 84px solid #3aaa35;
+				border-right: 84px solid #3aaa35;
+				border-left: 84px solid transparent;
+				border-top: 84px solid transparent;
+			}
+		}
+	}
+
+	@media (max-width: 1919px) {
+		margin-bottom: 60px;
+
+		&__title {
+			max-width: 636px;
+			margin-bottom: 44px;
+
+			&._company {
+				padding-left: 100px;
+			}
+		}
+
+		&__photo {
+			margin-bottom: 91px;
+
+			img {
+				float: none;
+				margin-right: 0;
+			}
+		}
+
+		&__list {
+			margin-bottom: 56px;
+			max-width: 845px;
+			padding-left: 80px;
+			box-sizing: border-box;
+		}
+
+		&__item {
+
+			&._trust {
+				margin-bottom: 82px;
+			}
+
+			&._responsibility {
+				margin-top: 28px;
+				margin-bottom: 78px;
+			}
+
+			&._opennes {
+				margin-top: 94px;
+			}
+
+			&._uncompromising {
+				margin-top: 82px;
+			}
+
+			&._image {
+
+				&._right {
+
+					img {
+						float: none;
+						margin-right: 0;
+						margin-left: 43px;
+					}
+				}
+			}
+		}
+
+		&__bg {
+
+			span {
+
+				&:nth-child(1) {
+					margin-top: -45%;
+					margin-left: 26.5%;
+				}
+
+				&:nth-child(2) {
+					margin-top: -9.1%;
+					margin-left: -46.3%;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1365px) {
+		text-align: center;
+		margin-bottom: 92px;
+
+		&__title {
+			display: inline-block;
+			vertical-align: top;
+			text-align: left;
+			margin-bottom: 65px;
+
+			&._company {
+				display: block;
+				padding-left: 25px;
+			}
+		}
+
+		&__list {
+			max-width: 775px;
+			padding-left: 40px;
+			margin-bottom: 68px;
+		}
+
+		&__item {
+
+			&._responsibility {
+				margin-top: 0;
+				margin-bottom: 106px;
+			}
+
+			&._uncompromising {
+				margin-top: 49px;
+			}
+
+			&._image {
+
+				&._left {
+
+					img {
+						margin-left: 0;
+					}
+				}
+
+				&._right {
+
+					img {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		&__bg {
+
+			span {
+
+				&:nth-child(1) {
+					margin-top: -46%;
+					margin-left: 22.5%;
+				}
+
+				&:nth-child(2) {
+					margin-top: -1.1%;
+					margin-left: -46.3%;
+					border-width: 65px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 999px) {
+		padding: 0 48px;
+		margin: 0 auto 134px;
+
+		&__title {
+			display: block;
+			max-width: 100%;
+			padding-left: 51px;
+			margin-bottom: 39px;
+		}
+
+		&__photo {
+			max-width: 768px;
+			margin-bottom: 69px;
+		}
+
+		&__list {
+			max-width: 672px;
+			padding: 0 26px;
+			box-sizing: border-box;
+			margin-bottom: 62px;
+		}
+
+		&__item {
+			width: 270px;
+
+			&._trust {
+				margin-bottom: 37px;
+			}
+
+			&._responsibility {
+				margin-top: 0;
+				margin-bottom: 88px;
+			}
+
+			&._uncompromising {
+				margin-top: 68px;
+			}
+
+			&._opennes {
+				margin-top: 100px;
+			}
+
+			&._uncompromising {
+				margin-top: 46px;
+			}
+
+			&._image {
+
+				&._left {
+
+					img {
+						float: right;
+						margin-left: 0;
+						margin-right: -30px;
+						max-height: 220px;
+					}
+				}
+
+				&._right {
+
+					img {
+						margin-left: -17px;
+						max-height: 203px;
+					}
+				}
+			}
+		}
+
+		&__bg {
+
+			span {
+
+				&:nth-child(1) {
+					margin-top: -53%;
+					margin-left: 15.5%;
+				}
+
+				&:nth-child(2) {
+					margin-top: 13.9%;
+					margin-left: -31.3%;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		padding: 0 35px;
+		margin-bottom: 80px;
+
+		&__title {
+			padding: 0;
+			margin-bottom: 29px;
+
+			&._company {
+				font-size: 30px;
+				padding-left: 0;
+				margin-bottom: 51px;
+			}
+		}
+
+		&__photo {
+			margin: 0 -35px 45px;
+		}
+
+		&__list {
+			padding: 0;
+			margin-bottom: 17px;
+		}
+
+		&__item {
+			width: auto;
+
+			&._left,
+			&._right {
+				float: none;
+			}
+
+			&._image {
+				display: none;
+			}
+
+			&._trust,
+			&._responsibility,
+			&._opennes,
+			&._uncompromising {
+				margin: 0 0 32px;
+			}
+
+			h4 {
+				padding-left: 25px;
+
+				svg,
+				img {
+					left: 0;
+				}
+			}
+		}
+
+		&__bg {
+			display: none;
+		}
+	}
+}

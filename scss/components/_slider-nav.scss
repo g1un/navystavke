@@ -1,0 +1,25 @@
+.slider-nav {
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	margin-top: -11px;
+	padding: 0;
+	width: 14px;
+	height: 14px;
+	border: none;
+	outline: none;
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background: transparent;
+	cursor: pointer;
+
+	&._prev {
+		left: 35px;
+		transform: rotate(45deg);
+	}
+
+	&._next {
+		right: 35px;
+		transform: rotate(225deg);
+	}
+}

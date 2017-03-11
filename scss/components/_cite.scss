@@ -1,0 +1,100 @@
+/*cite*/
+.cite {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 102;
+
+  background: $color-red-radical;
+
+  min-height: 2 * (92px + 2 * 22px + 25px);
+
+  &__close {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+
+    margin-top: -92px - 22px - 25px; //text block height, cross height, space between cross & text
+    margin-right: -$block-width / 2 ;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: $block-width;
+    height: 100%;
+
+    margin: 0 auto;
+  }
+
+  &__text {
+    margin-bottom: 27px;
+
+    font-family: MolniaPro-Bold, sans-serif;
+    font-size: 26px;
+    line-height: 1.38em;
+    color: $color-torea-bay;
+
+    position: relative;
+
+    br {
+      display: none;
+    }
+  }
+
+  &__author,
+  &__company {
+    font-family: MolniaPro-Bold, sans-serif;
+    font-size: 12px;
+    line-height: 1em;
+    color: $color-torea-bay;
+    text-transform: uppercase;
+  }
+
+  &__author {
+    float: left;
+  }
+
+  &__company {
+    float: right;
+  }
+
+  //iPad landscape
+  @media only screen and (min-width: 1024px) {
+    min-height: 2 * (142px + 2 * 22px + 25px);
+
+    &__close {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+
+      margin-top: -142px - 22px - 25px; //text block height, cross height, space between cross & text
+      margin-right: -(930 / 2) + px ;
+    }
+
+    &__container {
+      width: 930px;
+    }
+
+    &__text {
+      margin-bottom: 33px;
+
+      font-size: 68px;
+      line-height: 1.06em;
+
+      br {
+        display: inline;
+      }
+    }
+
+    &__author,
+    &__company {
+      font-size: 34px;
+    }
+  }
+}
+/*/cite*/

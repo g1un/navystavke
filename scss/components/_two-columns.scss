@@ -1,0 +1,36 @@
+/*two-columns*/
+.two-columns {
+  @extend  .clearfix;
+
+  &__left {
+    float: left;
+
+    line-height: 48px;
+    text-align: left;
+  }
+
+  &__right {
+    float: right;
+
+    line-height: 48px;
+    text-align: right;
+  }
+
+  &__info {
+    clear: both;
+
+    padding-top: 36px;
+  }
+
+  &--low {
+
+    .two-columns {
+
+      &__left,
+      &__right {
+        line-height: 1.5em;
+      }
+    }
+  }
+}
+/*/two-columns*/

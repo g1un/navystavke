@@ -1,0 +1,98 @@
+.select {
+	position: relative;
+
+	.ui-selectmenu-button {
+
+		&.ui-button {
+			width: auto;
+			border: none;
+			background: transparent;
+			padding: 0;
+			margin: 0;
+			line-height: 1em;
+			color: #000;
+			display: inline-block;
+			vertical-align: top;
+			cursor: pointer;
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: -36px;
+				margin-top: -4px;
+				border-top: 8px solid #000;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+			}
+
+			&:focus {
+				border: none;
+				outline: none;
+			}
+		}
+	}
+
+	.ui-widget {
+		@include font-fpt-book();
+	}
+
+	.ui-selectmenu-text {
+		margin: 0;
+	}
+
+	.ui-selectmenu-icon {
+
+		&.ui-icon {
+			display: none;
+		}
+	}
+
+	//menu
+	.ui-selectmenu-menu {
+		margin: 22px 0 0 -18px;
+	}
+
+	.ui-menu {
+		width: auto !important;
+		padding: 16px 0;
+		border: none;
+		border-radius: 8px;
+		background: #f1f1f1;
+	}
+
+	.ui-menu-item {
+		list-style: none;
+	}
+
+	.ui-menu-item-wrapper {
+		padding: 0 20px;
+		font-size: 22px;
+		line-height: 34px;
+		color: #000;
+		text-transform: uppercase;
+
+		&.ui-state-active {
+			color: #f39200;
+			background: transparent;
+			border: none;
+			margin: 0;
+			padding: 0 20px;
+		}
+	}
+
+	@media (max-width: 767px) {
+
+		.ui-selectmenu-button {
+
+			&.ui-button {
+
+				&:after {
+					border-width: 4px;
+					right: -16px;
+					margin-top: -2px;
+				}
+			}
+		}
+	}
+}

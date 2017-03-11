@@ -1,0 +1,108 @@
+/*intro-slider*/
+.intro-slider {
+  
+  &__item {
+    height: 192px;
+  }
+
+  &__gym {
+    background: transparent url('../img/slide-01.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &__home {
+    background: transparent url('../img/sec-3-slide-1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &__office {
+    background: transparent url('../img/sec-5-slide-1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &__repair {
+    background: transparent url('../img/bg.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  //iPad portrait & width >= 480
+  @media only screen and (min-width: 480px) {
+    position: absolute;
+    width: 100%;
+
+    &__item {
+      height: 736px;
+    }
+
+    &__nav {
+      display: block;
+
+      position: absolute;
+      bottom: 57px;
+      left: 50%;
+      margin-left: -33px;
+    }
+  }
+
+  //iPad landscape
+  @media only screen and (min-width: 1024px) {
+    z-index: 1;
+
+    &__nav {
+      bottom: 45px;
+    }
+  }
+
+  //Laptop >= 1280
+  @media only screen and (min-width: $width-lg) {
+
+    &__item {
+      height: $width-lg / 2;
+    }
+  }
+
+  //iPhone 5 landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    position: absolute;
+    width: 100%;
+
+    &__item {
+      height: 607px;
+    }
+  }
+
+  //iPhone 6 portrait
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+    &__item {
+      height: 240px;
+    }
+  }
+
+  //iPhone 6 landscape
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+    position: absolute;
+    width: 100%;
+
+    &__item {
+      height: 607px;
+    }
+  }
+
+  //iPhone 6+ landscape
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
+    position: absolute;
+    width: 100%;
+
+    &__item {
+      height: 607px;
+    }
+  }
+}
+/*/intro-slider*/

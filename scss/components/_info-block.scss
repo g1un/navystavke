@@ -1,0 +1,72 @@
+/*info-block*/
+.info-block {
+  padding: 64px 32px 40px;
+
+  position: relative;
+
+  &__wrapper {
+    width: $block-width;
+
+    margin: 0 auto;
+
+    background: transparent;
+  }
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    right: 30px;
+  }
+
+  &__header {
+    margin-bottom: 63px;
+  }
+
+  &__logo {
+    width: 180px;
+    height: 54px;
+
+    margin-bottom: 19px;
+
+    cursor: pointer;
+  }
+
+  &__enter-btn {
+    float: right;
+    margin-top: -38px;
+  }
+
+  &__city {
+    margin-top: 18px;
+  }
+
+  &__paragraph {
+    font-family: Proxima-Nova-Reg, sans-serif;
+    font-size: $fz-xs;
+    line-height: 1.5em;
+    color: $color-torea-bay;
+
+    b {
+      font-family: Proxima-Nova-Semibold, sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  &__signature {
+    margin-bottom: 24px;
+    text-align: right;
+  }
+
+  //iPad portrait
+  @media only screen and (min-width: 768px) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  //iPhone SE, 6, 6+ landscape
+  @media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+/*/info-block*/

@@ -1,0 +1,50 @@
+mixin frame(pageNav)
+	header.header(class=attributes.class)
+		.header__wrapper
+			a(href="#").logo.header__logo
+				.logo__image
+					img(src="img/svg/logo.svg")
+				.logo__title V-events
+				.logo__slogan Limited liability<br>company
+			nav.nav.header__nav.js-close-object(data-html-unscroll="true")
+				.close.nav__close.js-close
+				ul.nav__list
+					each val in ["Company", "Portfolio", "V-events club", "V-events univercity", "Blog", "Contacts"]
+						li(class="nav__item#{val=='Portfolio' ? ' _menu' : ''}")
+							a(href="#").nav__link!= val
+							if val == 'Portfolio'
+								ul.nav__list
+									each val in ["Corporate events", "Special events", "Trade events"]
+										li.nav__item
+											a(href="#", title='#{val}').nav__link!= val
+				.lang._nav.nav__lang
+					img(src="img/svg/flag.svg")
+					a(href="#").lang__item._ru._show Russian
+					a(href="#").lang__item._en Английский
+				.social._nav.nav__social
+					ul.social__list
+						each val in ["fb", "ig", "yt"]
+							li.social__item
+								a(href="#", class="social__link _#{val}")
+									img(src="img/svg/#{val}.svg")
+			.lang.header__lang
+				.lang__container
+					img(src="img/svg/flag.svg")
+					a(href="#").lang__item._ru._show Russian
+					a(href="#").lang__item._en Английский
+			.sandwich.header__sandwich(data-open-btn="nav")
+	.social
+		ul.social__list
+			each val in ["fb", "ig", "yt"]
+				li.social__item
+					a(href="#").social__link
+						img(src="img/svg/#{val}.svg")
+	.page-nav.js-aside-nav
+		ul.page-nav__list
+			each val in pageNav
+				li.page-nav__item
+					a(href="#", data-link="#{val}").page-nav__link
+	.down
+		a(href="#").down__link.js-scrollup
+			span
+			|Scroll down

@@ -1,0 +1,29 @@
+/*messengers*/
+.messengers {
+
+   &__title {
+     margin-bottom: 29px;
+   }
+
+  &__item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  //Laptop >= 1280
+  @media only screen and (min-width: $width-lg) {
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      margin: 0;
+    }
+  }
+}
+/*/messengers*/

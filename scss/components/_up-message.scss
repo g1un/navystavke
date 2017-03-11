@@ -1,0 +1,105 @@
+/*up-message*/
+.up-message {
+  margin-top: -72px;
+
+  transition: margin 1s;
+
+  background: $color-red-radical;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+
+  .container-m {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 72px;
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    z-index: 1;
+
+    margin-top: -11px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__logo {
+    display: none;
+
+    float: right;
+
+    margin-top: 12px;
+
+    width: 31px;
+    height: 41px;
+  }
+
+  #countbox {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 43px;
+    text-align: left;
+  }
+
+  //Laptop >= 1024 especially for menu
+  @media only screen and (min-width: 1024px) {
+    margin-top: -64px;
+
+    .container-m {
+      display: block;
+
+      width: 832px;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    &__close {
+      right: 50%;
+
+      margin-right: - 416px - 44px;
+    }
+
+    &__text {
+      margin: 0 40px;
+
+      font-size: 24px;
+      line-height: 64px;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__logo {
+      display: block;
+    }
+
+    #countbox {
+      min-width: 60px;
+    }
+  }
+
+  //Laptop >= 1280
+  @media only screen and (min-width: $width-lg) {
+
+    &__close {
+      margin-right: - 514px - 44px;
+    }
+
+    .container-m {
+      width: 1028px;
+    }
+  }
+}
+/*/up-message*/

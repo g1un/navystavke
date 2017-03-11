@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 48px;
+  background: #fff;
+  z-index: 2;
+
+  &__wrapper {
+    padding: 0 6px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    min-width: 210px;
+  }
+
+	&__nav {
+		height: 100%;
+	}
+
+  &__lang {
+    justify-content: flex-end;
+    min-width: 210px;
+  }
+
+  @media (max-width: 1365px) {
+
+		&__logo,
+		&__lang {
+			min-width: 140px;
+		}
+  }
+
+	@media (max-width: 999px) {
+		padding: 0 15px;
+
+		&__nav {
+			height: auto;
+		}
+	}
+}

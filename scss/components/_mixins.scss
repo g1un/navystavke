@@ -1,0 +1,19 @@
+/*mixins*/
+//placeholder
+@mixin placeholder($opacity, $color) {
+  &::-webkit-input-placeholder{
+    opacity: $opacity;
+    color: $color;
+  }
+
+  &:-ms-input-placeholder{
+    opacity: $opacity;
+    color: $color;
+  }
+
+  &::-moz-placeholder{
+    opacity: $opacity;
+    color: $color;
+  }
+}
+/*/mixins*/

@@ -1,0 +1,23 @@
+mixin header()
+	.header
+		.header__up
+			a(href='#').header__enter Войти
+			a(href='#').header__participate Стать участником
+		.header__down
+			a(href='#').header__logo.logo
+				img(src='../img/svg/logo.svg').logo__image
+				.logo__title #[span на]выставке.ru
+				.logo__subtitle портал онлайн выставок
+			.header__buttons
+				form(action='#', method='get').header__search
+					-var i = 'header__search'
+					input(type='text', name='#{i}-input', id='#{i}-input')
+					input(type='reset', name='#{i}-reset', id='#{i}-reset')
+					input(type='submit', name='#{i}-submit', id='#{i}-submit')
+				each value in ['favourite', 'random', 'radio']
+					a(href='#').header__button
+						img(src='../img/svg/#{value}.svg')
+
+
+
+
