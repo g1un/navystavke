@@ -1,18 +1,22 @@
 include logo
 
 mixin aside()
-	.aside
-		.aside__header._mobile
+	.aside._hover
+		.aside__header
 			.aside__close
 			+logo().aside__logo._grey
-		.aside__left
+		.aside__wrapper
 			.aside__promo
 				a(href='#').aside__promo-link
 					img(src='../img/svg/flowers.svg')
 					h4 цветы и подарки
-				.aside__promo-buttons
-					a(href='#').aside__calendar календарь
-					a(href='#').aside__warning последний день <br>выставка: «Камины»!
+				.aside__promo-buttons.clearfix
+					a(href='#').aside__calendar
+						img(src='../img/svg/calendar.svg')
+						span календарь
+					a(href='#').aside__warning
+						img(src='../img/svg/warning.svg')
+						span последний день <br>выставка: «Камины»!
 			.aside__catalog
 				ul.aside__list
 					-
@@ -40,16 +44,16 @@ mixin aside()
 						]
 					each val in list
 						li.aside__item
-							a(href='#').aside__link
+							.aside__item-wrapper
 								img(src='../img/svg/#{val.img}.svg')
 								h4!= val.title
-							ul.aside__exhibitions
-								each val in ['1', '2', '3']
-									li
+								.aside__exhibitions
+									each value in ['1', '2', '3']
 										a(href='#')
 											img(src='img/building.jpg', alt='building')
-											h4 название выставки
+											h5!= val.title + value
 											span с 23.05.2017
+							.aside__item-triangle
 			.aside__down
 				a(href='#').aside__down-link
 					img(src='img/jewellery.jpg', alt='jewellery')
