@@ -4,8 +4,8 @@
 //@import "plugins/jquery-ui.min";
 
 //base
-//@import 'components/fonts';
-//@import 'components/general';
+@import 'components/fonts';
+@import 'components/general';
 //@import 'components/btn';
 //@import 'components/select';
 //@import 'components/typography';
@@ -25,9 +25,10 @@
 
 //custom
 //@import "components/frame";
-//@import "components/header";
+@import "components/header";
+@import "components/controls";
 //@import "components/footer";
-//@import "components/logo";
+@import "components/logo";
 //@import "components/nav";
 //@import "components/lang";
 //@import 'components/social';

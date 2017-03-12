@@ -1,0 +1,17 @@
+include logo
+
+mixin controls()
+	.controls.container.clearfix
+		+logo().controls__logo
+		.controls__buttons
+			form(action='#', method='get').controls__search
+				-var i = 'controls__search'
+				input(type='text', name='#{i}-input', id='#{i}-input').controls__search-text
+				label(for='#{i}-reset').controls__search-reset
+					input(type='reset', name='#{i}-reset', id='#{i}-reset')
+				label(for='#{i}-submit').controls__search-submit
+					img(src='../img/svg/search.svg')
+					input(type='submit', name='#{i}-submit', id='#{i}-submit')
+			each value in ['favourite', 'random', 'radio']
+				a(href='#').controls__button
+					img(src='../img/svg/#{value}.svg')

@@ -1,0 +1,56 @@
+include logo
+
+mixin aside()
+	.aside
+		.aside__header._mobile
+			.aside__close
+			+logo().aside__logo._grey
+		.aside__left
+			.aside__promo
+				a(href='#').aside__promo-link
+					img(src='../img/svg/flowers.svg')
+					h4 цветы и подарки
+				.aside__promo-buttons
+					a(href='#').aside__calendar календарь
+					a(href='#').aside__warning последний день <br>выставка: «Камины»!
+			.aside__catalog
+				ul.aside__list
+					-
+						var list = [
+							{
+								"img": "building",
+								"title": "строительство"
+							},
+							{
+								"img": "agro",
+								"title": "агро"
+							},
+							{
+								"img": "furniture",
+								"title": "мебель"
+							},
+							{
+								"img": "logistics",
+								"title": "логистика"
+							},
+							{
+								"img": "security",
+								"title": "безопасность"
+							}
+						]
+					each val in list
+						li.aside__item
+							a(href='#').aside__link
+								img(src='../img/svg/#{val.img}.svg')
+								h4!= val.title
+							ul.aside__exhibitions
+								each val in ['1', '2', '3']
+									li
+										a(href='#')
+											img(src='img/building.jpg', alt='building')
+											h4 название выставки
+											span с 23.05.2017
+			.aside__down
+				a(href='#').aside__down-link
+					img(src='img/jewellery.jpg', alt='jewellery')
+					h4 ювелирная выставка

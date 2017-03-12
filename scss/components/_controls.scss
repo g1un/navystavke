@@ -1,0 +1,155 @@
+.controls {
+	padding-top: 10px;
+	padding-left: 18px;
+
+	&__logo {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__buttons {
+		float: right;
+	}
+
+	&__search {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 6px;
+		font-size: 0;
+		position: relative;
+
+		&._active {
+
+			.controls {
+
+				&__search {
+
+					&-text {
+						display: inline-block;
+						vertical-align: top;
+					}
+
+					&-submit {
+						background: #d44133;
+						
+						&:hover {
+							background: #8b0a0a;
+						}
+
+						svg {
+
+							path {
+								fill: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&-text {
+			display: none;
+			box-sizing: border-box;
+			width: 420px;
+			height: 40px;
+			border: 1px solid #be1b1c;
+			padding: 0 46px 0 13px;
+			@include font-mp-reg();
+			font-size: 15px;
+			line-height: 38px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&-reset {
+			display: none;
+			position: absolute;
+			top: 1px;
+			bottom: 1px;
+			right: 45px;
+			width: 46px;
+			background: #fff;
+			cursor: pointer;
+
+			&._show {
+				display: block;
+			}
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 18px;
+				left: 10px;
+				background: #c4c4c4;
+				width: 25px;
+				height: 2px;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+
+			input {
+				display: none;
+			}
+		}
+
+		&-submit {
+			display: inline-block;
+			vertical-align: top;
+			padding: 6px 8px 0;
+			height: 40px;
+			box-sizing: border-box;
+			cursor: pointer;
+			overflow: hidden;
+
+			svg {
+				width: 28px;
+				overflow: visible;
+			}
+
+			input {
+				display: none;
+			}
+
+			&:hover {
+
+				svg {
+
+					path {
+						fill: #8b0a0a;
+					}
+				}
+			}
+		}
+	}
+
+	&__button {
+		display: inline-block;
+		vertical-align: top;
+		text-decoration: none;
+		margin-top: 12px;
+		padding: 0 8px 0 7px;
+
+		&:last-of-type {
+			padding-right: 0;
+		}
+
+		&:hover {
+
+			svg {
+
+				path {
+					fill: #8b0a0a;
+				}
+			}
+		}
+	}
+}

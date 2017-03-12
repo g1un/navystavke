@@ -1,35 +1,39 @@
 .logo {
-  display: flex;
-  align-items: center;
-  @include  font-fpt-medium();
-  color: #000;
-  text-decoration: none;
+	text-decoration: none;
+	font-size: 0;
+	white-space: nowrap;
 
-  &__image {
-    width: 30px;
-    margin-right: 12px;
-    line-height: 0;
-  }
+	svg {
+		display: inline-block;
+		vertical-align: top;
+		width: 51px;
+		height: 51px;
+		margin-right: 21px;
+	}
 
-  &__title {
-    margin-right: 7px;
-    font-size: 21px;
-    text-transform: uppercase;
-  }
+	&__text {
+		display: inline-block;
+		vertical-align: top;
+	}
 
-  &__slogan {
-    font-size: 11px;
-    line-height: .8em;
-  }
+	&__title {
+		margin-top: -4px;
+		@include font-cg();
+		font-size: 37px;
+		line-height: 1em;
+		color: #343547;
+		letter-spacing: -.086em;
 
-  @media (max-width: 1365px) {
-
-		&__title {
-			margin-right: 0;
+		span {
+			color: #d44133;
 		}
+	}
 
-    &__slogan {
-			display: none;
-    }
-  }
+	&__subtitle {
+		margin-top: -1px;
+		@include font-roboto-reg();
+		font-size: 18px;
+		line-height: 1em;
+		color: #4c4c4c;
+	}
 }

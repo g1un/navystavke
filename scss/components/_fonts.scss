@@ -1,119 +1,28 @@
 @font-face {
-	font-family: FuturaPTMedium;
-	src: url(../fonts/FuturaPTMedium.otf),
-			 url(../fonts/FuturaPTMedium.woff2) format('woff2'),
-			 url(../fonts/FuturaPTMedium.woff) format('woff');
+	font-family: MyriadPro-Regular;
+	src: url(../fonts/MyriadPro-Regular.otf);
+			 //url(../fonts/FuturaPTMedium.woff2) format('woff2'),
+			 //url(../fonts/FuturaPTMedium.woff) format('woff');
 	font-weight: normal;
 }
-
-@mixin font-fpt-medium() {
-	font-family: FuturaPTMedium, sans-serif;
+@mixin font-mp-reg() {
+	font-family: MyriadPro-Regular, sans-serif;
 }
 
 @font-face {
-	font-family: RistrettoPro-Medium;
-	src: url(../fonts/ristrettopro-medium.otf),
-			 url(../fonts/ristrettopro-medium.woff2) format('woff2'),
-		 	 url(../fonts/ristrettopro-medium.woff) format('woff');
+	font-family: CenturyGothic;
+	src: url(../fonts/CenturyGothic.ttf);
 	font-weight: normal;
 }
-
-@mixin font-rp-medium() {
-	font-family: RistrettoPro-Medium, sans-serif;
+@mixin font-cg() {
+	font-family: CenturyGothic, sans-serif;
 }
 
 @font-face {
-	font-family: RistrettoPro-Reg;
-	src: url(../fonts/ristrettopro-reg.otf),
-			 url(../fonts/ristrettopro-reg.woff2) format('woff2'),
-		   url(../fonts/ristrettopro-reg.woff) format('woff');
+	font-family: Roboto-Regular;
+	src: url(../fonts/Roboto-Regular.ttf);
 	font-weight: normal;
 }
-
-@mixin font-rp-reg() {
-	font-family: RistrettoPro-Reg, sans-serif;
-}
-
-@font-face {
-	font-family: FuturaPTBook;
-	src: url(../fonts/FuturaPTBook.otf),
-			 url(../fonts/FuturaPTBook.woff2) format('woff2'),
-		 	 url(../fonts/FuturaPTBook.woff) format('woff');
-	font-weight: normal;
-}
-
-@mixin font-fpt-book() {
-	font-family: FuturaPTBook, sans-serif;
-}
-
-@font-face {
-	font-family: FuturaPTDemi;
-	src: url(../fonts/FuturaPTDemi.otf),
-			 url(../fonts/FuturaPTDemi.woff2) format('woff2'),
-		 	 url(../fonts/FuturaPTDemi.woff) format('woff');
-	font-weight: normal;
-}
-
-@mixin font-fpt-demi() {
-	font-family: FuturaPTDemi, sans-serif;
-}
-
-@font-face {
-	font-family: GaramondPremrPro;
-	src: url(../fonts/GaramondPremrPro.otf),
-			 url(../fonts/GaramondPremrPro.woff2) format('woff2'),
-		 	 url(../fonts/GaramondPremrPro.woff) format('woff');
-	font-weight: normal;
-}
-
-@mixin font-gp-pro() {
-	font-family: GaramondPremrPro, sans-serif;
-}
-
-@font-face {
-	font-family: GaramondPremrPro-it;
-	src: url(../fonts/GaramondPremrPro-It.otf),
-			 url(../fonts/GaramondPremrPro-It.woff2) format('woff2'),
-		 	 url(../fonts/GaramondPremrPro-It.woff) format('woff');
-	font-weight: normal;
-}
-
-@mixin font-gp-pro-it() {
-	font-family: GaramondPremrPro-it, sans-serif;
-}
-
-@font-face {
-	font-family: FuturaPTCondBold;
-	src: url(../fonts/FuturaPTCondBold.otf),
-			 url(../fonts/FuturaPTCondBold.woff2) format('woff2'),
-		 	 url(../fonts/FuturaPTCondBold.woff) format('woff');
-	font-weight: normal;
-}
-
-@mixin font-fpt-cond-bold() {
-	font-family: FuturaPTCondBold, sans-serif;
-}
-
-@font-face {
-	font-family: FuturaPTBold;
-	src: url(../fonts/FuturaPTBold.otf),
-			 url(../fonts/FuturaPTBold.woff2) format('woff2'),
-		 	 url(../fonts/FuturaPTBold.woff) format('woff');
-	font-weight: normal;
-}
-
-@mixin font-fpt-bold() {
-	font-family: FuturaPTBold, sans-serif;
-}
-
-@font-face {
-	font-family: FuturaPTHeavy;
-	src: url(../fonts/FuturaPTHeavy.otf),
-			 url(../fonts/FuturaPTHeavy.woff2) format('woff2'),
-		 	 url(../fonts/FuturaPTHeavy.woff) format('woff');
-	font-weight: normal;
-}
-
-@mixin font-fpt-heavy() {
-	font-family: FuturaPTHeavy, sans-serif;
+@mixin font-roboto-reg() {
+	font-family: Roboto-Regular, sans-serif;
 }

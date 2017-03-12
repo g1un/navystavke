@@ -11,8 +11,8 @@ var cssnano = require('gulp-cssnano');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var del = require('del');
-// var imagemin = require('gulp-imagemin');
-// var cache = require('gulp-cache');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 
 gulp.task('sass', function(){
   return gulp.src('scss/style.scss')
@@ -79,7 +79,7 @@ gulp.task('clean:js', function() {
 
 gulp.task('images', function(){
 	gulp.src('img/**/*.+(png|jpg|gif|svg)')
-		// .pipe(cache(imagemin()))
+		.pipe(cache(imagemin()))
 		.pipe(gulp.dest('app/img'))
 });
 
