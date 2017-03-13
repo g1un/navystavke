@@ -1,6 +1,6 @@
 //plugins
 @import "plugins/normalize";
-//@import "plugins/slick";
+@import "plugins/slick";
 //@import "plugins/jquery-ui.min";
 
 //base
@@ -11,7 +11,7 @@
 //@import 'components/typography';
 //@import 'components/close';
 //@import 'components/sandwich';
-//@import 'components/slider-nav';
+@import 'components/slider-nav';
 //@import 'components/slick-dots';
 //@import 'components/grid-news';
 //@import 'components/grid';
@@ -30,6 +30,8 @@
 //@import "components/footer";
 @import "components/logo";
 @import "components/aside";
+@import "components/up-slider";
+@import "components/info-slider";
 //@import "components/nav";
 //@import "components/lang";
 //@import 'components/social';

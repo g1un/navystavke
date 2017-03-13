@@ -9,6 +9,11 @@
 	width: 60px;
 	//min-height: calc(100vh - 116px);
 
+	&._fixed {
+		position: fixed;
+		top: 45px;
+	}
+
 	&:hover {
 		width: 251px;
 

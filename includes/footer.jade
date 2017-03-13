@@ -1,24 +1,12 @@
 mixin footer()
-	footer.footer#footer(class=attributes.class)
-		-
-			var footerList = [
-				'WHAT WE <br>REALY CARE ABOUT',
-				'JOIN <br>V-EVENTS <br>CLUB',
-				'ORGANIZE <br>THE EVENT',
-				'ABOUT <br>V-EVENTS <br>UNIVERSITY'
-			]
-		each val, index in footerList
-			a(href='#').footer__item
-				.footer__item-bg(style="background-image: url('img/footer-img-#{index}.jpg')")
-				h4!= val
-					span know more
+	footer.footer
 
 	script(src='js/jquery-3.0.0.min.js')
-	script(src='js/jquery-ui.min.js')
+	//script(src='js/jquery-ui.min.js')
 	script(src='js/slick.min.js')
-	script(src='js/TweenMax.js')
-	script(src='js/ScrollMagic.js')
+	//script(src='js/TweenMax.js')
+	//script(src='js/ScrollMagic.js')
 	//script(src='js/debug.addIndicators.js')
-	script(src='js/animation.gsap.js')
-	script(src='js/scrollreveal.js')
+	//script(src='js/animation.gsap.js')
+	//script(src='js/scrollreveal.js')
 	script(src='js/script.js')

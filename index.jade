@@ -9,8 +9,14 @@ html
 		include includes/header
 		include includes/controls
 		include includes/aside
+		include includes/up-slider
+		include includes/info-slider
+		include includes/footer
 
 		+header()
 		+controls()
 		+aside()
-		//+footer()
+		.container-l
+			+up-slider()
+			+info-slider()
+		+footer()

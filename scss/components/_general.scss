@@ -22,11 +22,16 @@ body {
 	padding: 45px 0 0;
 }
 
-.container {
+.container,
+.container-l {
 	margin: 0 auto;
 	width: 1280px;
 	box-sizing: border-box;
 	padding: 0 11px 0 13px;
+}
+
+.container-l {
+	padding: 0 11px 0 88px;
 }
 
 .clearfix::after {
