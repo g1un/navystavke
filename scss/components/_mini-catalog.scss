@@ -1,0 +1,27 @@
+.mini-catalog {
+	padding: 8px 5px 8px 4px;
+	width: 370px;
+	box-sizing: border-box;
+	background: #ebebeb;
+	font-size: 0;
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 4px;
+		margin-bottom: 5px;
+
+		&:nth-child(7n) {
+			margin: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 48px;
+		height: 48px;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}

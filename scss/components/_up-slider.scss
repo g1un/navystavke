@@ -4,4 +4,22 @@
 	&__item {
 		font-size: 0;
 	}
+
+	.slider-nav {
+
+		&._prev {
+			top: 22px;
+			right: 35px;
+			left: auto;
+			width: 14px;
+			height: 14px;
+		}
+
+		&._next {
+			top: 22px;
+			right: 16px;
+			width: 14px;
+			height: 14px;
+		}
+	}
 }

@@ -1,0 +1,32 @@
+mixin register()
+	.register(class=attributes.class)
+		.register__text
+			h3 стать участником <br>или посетить выставку<br> просто:
+			p НаВыставке.ru – это удобный, информативный и всегда актуальный навигатор, охватывающий все выставки текущего года. На ресурсе наиболее полно представлены выставки в Москве и Санкт-Петербурге.
+		form(action='#', method='get').register__form
+			-var i = 'register'
+			.register__form-left
+				.register__social
+					p войти через соц сети
+					ul.register__social-list
+						each val in ['fb', 'vk', 'ya', 'gplus', 'tw', 'mailru']
+							li.register__social-item
+								a(href='#').register__social-link
+									img(src='../img/svg/#{val}.svg')
+				.register__data
+					p или быстрая регистрация
+					label.register__label._login
+						input(type='text', name='#{i}-login', id='#{i}-login').register__input
+						img(src='../img/svg/login.svg')
+					label.register__label._email
+						input(type='text', name='#{i}-email', id='#{i}-email').register__input
+						img(src='../img/svg/email.svg')
+			.register__form-right
+				.register__captcha
+					input(type='checkbox', name='#{i}-captcha', id='#{i}-captcha').register__captcha-input
+					label(for='#{i}-captcha').register__captcha-label
+						img(src='../img/svg/check.svg').checked
+						|я не робот
+				.register__form-buttons
+					button(type="button", name='#{i}-login', id='#{i}-login').register__login Войти
+					button(type="button", name='#{i}-signup', id='#{i}-signup').register__signup зарегистрироваться

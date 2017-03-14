@@ -1,0 +1,7 @@
+include mini-catalog
+include register
+
+mixin user()
+	.user
+		+mini-catalog().user__list
+		+register().user__form

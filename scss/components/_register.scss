@@ -1,0 +1,238 @@
+.register {
+	font-size: 0;
+	background: linear-gradient(to right, #d44133, #ff8559);
+
+	&__text {
+		display: inline-block;
+		vertical-align: top;
+		width: 37%;
+		box-sizing: border-box;
+		padding: 5px 5px 5px 10px;
+
+		h3 {
+			@include font-roboto-reg();
+			font-size: 20px;
+			line-height: 1em;
+			color: #fff;
+			margin-bottom: 21px;
+		}
+
+		p {
+			@include font-mp-reg();
+			font-size: 12px;
+			line-height: 1.3em;
+			color: #fff;
+		}
+	}
+
+	&__form {
+		display: inline-block;
+		vertical-align: top;
+		width: 63%;
+		box-sizing: border-box;
+		padding-left: 47px;
+		font-size: 0;
+
+		&-left,
+		&-right {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		&-left {
+			padding-top: 9px;
+		}
+
+		&-right {
+			margin-left: 109px;
+			padding-top: 8px;
+		}
+	}
+
+	&__social {
+		font-size: 0;
+		margin-bottom: 15px;
+
+		p {
+			@include font-mp-reg();
+			font-size: 12px;
+			line-height: 1.2em;
+			color: #fff;
+			margin-bottom: 9px;
+		}
+
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 8px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&-link {
+
+			svg {
+				display: block;
+				width: 22px;
+				height: 22px;
+				box-shadow: 2px 2px 2px 0 rgba(0,0,0,.25);
+			}
+		}
+	}
+
+	&__data {
+
+		p {
+			@include font-mp-reg();
+			font-size: 12px;
+			line-height: 1.2em;
+			color: #fff;
+			margin-bottom: 8px;
+		}
+	}
+
+	&__label {
+		display: block;
+		position: relative;
+		margin-bottom: 7px;
+
+		svg {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 11px;
+		}
+
+		&._login {
+
+			svg {
+				margin-top: -11px;
+			}
+		}
+
+		&._email {
+
+			svg {
+				margin-top: -11px;
+			}
+		}
+	}
+
+	&__input {
+		display: block;
+		width: 180px;
+		padding: 0 10px 0 40px;
+		box-sizing: border-box;
+		height: 30px;
+		border: 1px solid transparent;
+		border-radius: 15px;
+		outline: none;
+		background: #fff;
+		@include font-mp-reg();
+		font-size: 18px;
+		line-height: 28px;
+		color: #000;
+		
+		&:focus {
+			border-color: #6f9e30;
+
+			& + svg {
+
+				path {
+					fill: #6f9e30;
+				}
+			}
+		}
+	}
+
+	&__captcha {
+		width: 136px;
+		height: 68px;
+		padding: 7px 5px;
+		margin-bottom: 16px;
+		box-sizing: border-box;
+		background: #e4e4e4;
+		text-align: center;
+		position: relative;
+
+		&-input {
+			display: none;
+
+			&:checked + label .checked {
+				display: block;
+				position: absolute;
+				top: 3px;
+				left: 2px;
+				width: 20px;
+				height: 17px;
+			}
+		}
+
+		&-label {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 7px;
+			@include font-mp-reg();
+			font-size: 14px;
+			line-height: 1.2em;
+			color: #4c4c4c;
+			white-space: nowrap;
+			text-align: center;
+			cursor: pointer;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 24px;
+				height: 24px;
+				background: #fff;
+				border-radius: 3px;
+				margin-right: 10px;
+			}
+
+			.checked {
+				display: none;
+			}
+		}
+	}
+
+	&__form {
+
+		&-buttons {
+
+			button {
+				display: block;
+				height: 29px;
+				width: 140px;
+				border-radius: 15px;
+				border: none;
+				outline: none;
+				background: #4c4c4c;
+				margin-bottom: 8px;
+				@include font-mp-reg();
+				line-height: 29px;
+				color: #fff;
+				text-align: center;
+
+				&:hover,
+				&:focus {
+					background: #6f9e30;
+				}
+			}
+		}
+	}
+
+	&__login {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	&__signup {
+		font-size: 13px;
+
+	}
+}

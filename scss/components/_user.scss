@@ -1,0 +1,15 @@
+.user {
+	display: table;
+
+	&__list {
+		width: 370px;
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	&__form {
+		width: 810px;
+		display: table-cell;
+		vertical-align: top;
+	}
+}

@@ -1,10 +1,10 @@
 .info-slider {
-	margin: 0 -7px;
+	margin: 0 -7px 8px;
 
 	&__item {
 		display: block;
-		height: 276px;
 		padding: 0 7px;
+		text-decoration: none;
 	}
 
 	&__bg {
@@ -35,7 +35,7 @@
 		left: 26px;
 		right: 29px;
 		bottom: 0;
-		padding: 0 16px;
+		padding: 10px 16px 0;
 		transition: all .25s;
 
 		&._allports {
@@ -57,7 +57,7 @@
 		span {
 			@include font-mp-reg();
 			font-size: 14px;
-			line-height: 35px;
+			line-height: 1.2em;
 			color: #fff;
 		}
 
@@ -68,8 +68,54 @@
 			color: #fff;
 		}
 
+		&-up {
+			padding-bottom: 10px;
+		}
+
 		&-down {
+			padding-top: 10px;
 			border-top: 1px solid #fff;
+		}
+	}
+
+	&__statistics {
+		padding: 5px 28px;
+		display: flex;
+		align-items: center;
+
+
+		&-item {
+			margin-right: 5px;
+			@include font-mp-bold();
+			font-size: 10px;
+			line-height: 1.2em;
+			color: #999;
+			display: inline-flex;
+			align-items: center;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.slider-nav {
+		border-color: #fff;
+		border-width: 2px;
+		width: 16px;
+		height: 16px;
+		top: 122px;
+
+		&._prev {
+			left: 21px;
+		}
+
+		&._next {
+			right: 21px;
 		}
 	}
 }

@@ -1,0 +1,7 @@
+mixin mini-catalog()
+	ul.mini-catalog(class=attributes.class)
+		-var i = 0;
+		while i < 21
+			li.mini-catalog__item
+				a(href='#', style='background-image: url(img/mini-catalog-1.jpg)').mini-catalog__link
+			-i++

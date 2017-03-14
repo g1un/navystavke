@@ -1,6 +1,7 @@
 .controls {
 	padding-top: 10px;
 	padding-left: 18px;
+	margin-bottom: 10px;
 
 	&__logo {
 		display: inline-block;
@@ -112,6 +113,7 @@
 
 			svg {
 				width: 28px;
+				height: 28px;
 				overflow: visible;
 			}
 
