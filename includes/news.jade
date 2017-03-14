@@ -1,0 +1,19 @@
+include articles-title
+include article-views
+
+mixin news()
+	.news
+		+articles-title наши новости
+		ul.news__list
+			-var i = 0
+			while i < 3
+				li.news__item.clearfix
+					+article-views()
+					.articles__text-xs 27.12.2016
+					h4.articles__title-md Санкт-Петербургская Рождественская ярмарка 2016
+					.articles__text-xs._valencia._ttu 24 декабря – 08 января
+					p Более двух недель Пионерская площадь у театра юного зрителя будет центром праздничных гуляний. На выставке-продаже будет демонстрироваться самая разнообразная продукция из Белоруссии, Прибалтики, Израиля, Китая...
+					a(href='#').articles__more
+				-i++
+		a(href='#').articles__link
+			img(src='img/military-banner.jpg', alt='military-banner')

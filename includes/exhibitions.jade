@@ -1,0 +1,11 @@
+include articles-title
+
+mixin exhibitions()
+	.exhibitions
+		+articles-title() галерея выставок
+		.exhibitions__list
+			-var i = 0
+			while i < 4
+				a(href='#').exhibitions__item
+					img(src='img/exhibitions.jpg', alt='exhibitions')
+				-i++

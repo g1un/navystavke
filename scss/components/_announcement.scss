@@ -1,0 +1,30 @@
+.announcement {
+
+	&__item {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	&__image {
+		display: table-cell;
+		vertical-align: top;
+		width: 121px;
+		line-height: 0;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__text {
+		display: table-cell;
+		vertical-align: top;
+		padding-left: 15px;
+	}
+
+	&__more {
+		clear: none;
+	}
+}

@@ -1,0 +1,13 @@
+.article-views {
+	display: block;
+	float: right;
+	@include font-roboto-reg();
+	font-size: 12px;
+	line-height: 1.2em;
+	color: #868686;
+	text-align: right;
+
+	svg {
+		margin-right: 9px;
+	}
+}

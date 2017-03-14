@@ -1,0 +1,169 @@
+.articles {
+	font-size: 0;
+
+	&__left,
+	&__right {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__left {
+		width: 46.4%;
+	}
+
+	&__right {
+		width: 53.6%;
+	}
+
+	&__title {
+
+		&-lg {
+			display: inline-block;
+			vertical-align: top;
+			min-width: 270px;
+			margin-bottom: 20px;
+			padding: 0 35px 0 23px;
+			box-sizing: border-box;
+			background: #5e5e5e;
+			@include font-mp-reg();
+			font-size: 21px;
+			line-height: 30px;
+			color: #fff;
+			text-transform: lowercase;
+			position: relative;
+
+			.arrows {
+				display: block;
+				position: absolute;
+				top: 2px;
+				right: 3px;
+				bottom: 2px;
+				width: 26px;
+				background: #333;
+				text-decoration: none;
+
+				&:before,
+				&:after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					margin-top: -5px;
+					width: 8px;
+					height: 8px;
+					border-right: 1px solid #6a6e7c;
+					border-bottom: 1px solid #6a6e7c;
+					transform: rotate(-45deg);
+				}
+
+				&:before {
+					left: 3px;
+				}
+
+				&:after {
+					right: 9px;
+				}
+				
+				&:hover,
+				&:focus {
+					background: #d44133;
+
+					&:before,
+					&:after {
+						border-color: #fff;
+					}
+				}
+			}
+		}
+
+		&-md {
+			margin: 5px 0;
+			@include font-mp-bold();
+			font-size: 16px;
+			line-height: 1.2em;
+			color: #3c3c3b;
+		}
+	}
+
+	&__text {
+
+		&-xs {
+			@include font-mp-reg();
+			font-size: 12px;
+			line-height: 1.2em;
+			color: #868686;
+		}
+
+		&-sm {
+			@include font-mp-reg();
+			font-size: 14px;
+			line-height: 1.2em;
+			color: #000;
+		}
+	}
+
+	p {
+		margin: 10px 0 0;
+		@include font-mp-reg();
+		font-size: 16px;
+		line-height: 1em;
+		color: #000;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	&__more {
+		display: block;
+		float: right;
+		clear: both;
+		width: 12px;
+		height: 12px;
+		position: relative;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			margin-top: -6px;
+			width: 8px;
+			height: 8px;
+			border-right: 1px solid #ff0000;
+			border-bottom: 1px solid #ff0000;
+			transform: rotate(-45deg);
+		}
+
+		&:before {
+			right: 9px;
+		}
+	}
+
+	&__link {
+		display: block;
+		line-height: 0;
+	}
+
+	//basic
+
+	._valencia {
+		color: #d44133;
+	}
+	
+	._black {
+		color: #000;
+	}
+
+	._ttu {
+		text-transform: uppercase;
+	}
+
+	._reg {
+		@include font-mp-reg();
+	}
+
+	._rob {
+
+		@include font-roboto-reg();
+	}
+}

@@ -1,0 +1,17 @@
+include articles-title
+
+mixin announcement()
+	.announcement
+		+articles-title анонсы
+		ul.announcement__list
+			-var i = 0
+			while i < 4
+				li.announcement__item
+					.announcement__image
+						img(src='img/announcement-#{i % 3 + 1}.jpg', alt='announcement-#{i % 3 + 1}')
+					.announcement__text
+						.articles__title-md 23 - 29 декабря
+						a(href='#').announcement__more.articles__more
+						.articles__title-md._valencia._ttu._reg Подарки к Новому году 2017
+						p Выставки-ярмарки в области народных художественных промыслов и ремесел,сувенирной продукции проводятся ...
+				-i++

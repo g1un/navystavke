@@ -1,0 +1,43 @@
+include articles-title
+include article-views
+
+mixin media()
+	.media
+		+articles-title сми
+		.media__periodicals
+			-var i = 0
+			while i < 2
+				a(href='#').media__periodicals-item
+					.media__periodicals-name
+						img(src='img/periodical-#{i % 3 + 1}.jpg', alt='periodical-#{i % 2 + 1}')
+						span.articles__title-md._rob._valencia «газета.ru»  февраль 2017  №56
+					.articles__title-md Строительство и недвижимость, Финансы и инвестиции
+					p Осенняя выставка «Недвижимость от лидеров-2016», завершившаяся 2 октября в ЦДХ, всегда показывала хорошие результаты, и прошедшее мероприятие не стало исключением...
+					+article-views()
+				-i++
+		.media__journal
+			.media__journal-header.clearfix
+				.media__journal-image
+					img(src='img/periodical-3.jpg', alt='journal')
+				.media__journal-text
+					.articles__title-md._valencia._reg журнал «Мир Выставок»
+					p для профессионалов с максимально полной, всесторонней информации, необходимой для  эффективного бизнеса в выставочной сфере
+			ul.media__news
+				-var i = 0
+				while i < 4
+					li.media__news-item
+						.media__news-date.articles__text-sm 12 Декабря
+						a(href='#').media__news-name.articles__title-md._reg._black Made in Moscow: продукцию столичных производителей покажут на ведущих мировых выставках
+					-i++
+		.media__subscribe
+			.articles__text-sm._valencia журнал «Москва-Пекин»
+			.media__subscribe-wrapper.clearfix
+				.media__subscribe-buttons
+					a(href='#') оформить подписку
+					br
+					a(href='#') купить архив журнала
+				.media__subscribe-image
+					img(src='img/moscow-beijing-logo.png', alt='moscow-beijing-logo')
+			p Для профессионалов с максимально полной, всесторонней информации, необходимой для эффективного бизнеса в выставочной сфереля профессионалов с максимально полной, всесторонней информации, необходимой для эффективного бизнеса в выставочной сфере. Уникальная возможность получить исчерпывающую информацию в короткий срок.<br>
+				|Бесплатные мастер-классы, семинары.<br>
+				|Удобство расположения: 50 метров от ст. метро Спортивная.

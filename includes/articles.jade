@@ -1,0 +1,13 @@
+include news
+include announcement
+include media
+include exhibitions
+
+mixin articles()
+	.articles
+		.articles__left
+			+news()
+			+announcement()
+			+media()
+			+exhibitions()
+		.articles__right
