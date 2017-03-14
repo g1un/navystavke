@@ -1,0 +1,4 @@
+mixin tags(list)
+	.tags(class=attributes.class)
+		each val in list
+			a(href='#').tags__link!= val

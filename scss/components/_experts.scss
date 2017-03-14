@@ -1,0 +1,75 @@
+.experts {
+
+	&__tags {
+		margin-bottom: 23px;
+	}
+
+	&__blogs {
+
+		&-item {
+			display: block;
+			margin-bottom: 20px;
+			text-decoration: none;
+		}
+	}
+
+	&__date {
+		float: right;
+	}
+
+	&__name {
+		font-size: 0;
+		margin-bottom: 8px;
+
+		&-title,
+		&-value {
+			display: inline-block;
+			vertical-align: baseline;
+		}
+
+		&-title {
+			margin-right: 9px;
+		}
+	}
+
+	&__specialists {
+		margin-bottom: 15px;
+		font-size: 0;
+
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			box-sizing: border-box;
+			padding-right: 4px;
+			border-right: 1px solid #d44133;
+			margin-bottom: 15px;
+			text-decoration: none;
+
+			&:nth-child(2n) {
+				border-right: none;
+				padding-left: 6px;
+				padding-right: 0;
+			}
+
+			p {
+				margin-bottom: 8px;
+			}
+		}
+
+		&-header {
+
+			img {
+				display: block;
+				float: left;
+				max-width: 56px;
+				border-radius: 50%;
+			}
+		}
+
+		&-name,
+		&-position {
+			margin-left: 66px;
+		}
+	}
+}

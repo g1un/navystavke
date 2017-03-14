@@ -1,0 +1,16 @@
+include articles-title
+
+mixin tenders()
+	.tenders
+		+articles-title() тендеры
+		ul.tenders__list
+			-var i = 0
+			while i < 3
+				li.tenders__item.clearfix
+					.tenders__info
+						.tenders__number №34577
+						.tenders__date от 22.01.2017
+					.tenders__text
+						.tenders__title.articles__title-md._valencia._reg._ttu ооо «лапы и хвосты»
+						p обьявил тендер на сопровождение системы охраны зоопарков в Санкт-Петербурге.
+				-i++

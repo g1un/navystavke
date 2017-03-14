@@ -1,0 +1,41 @@
+include articles-title
+include tags
+include article-views
+-
+	var tagsList = [
+		"юридические консультации",
+		"агропром",
+		"интеллектуальная собственность",
+		"безопасность",
+		"логистика",
+		"цена на иностранные товары"
+	]
+
+mixin experts()
+	.experts
+		+articles-title() экспертное мнение
+		+tags(tagsList).experts__tags
+		.experts__blogs
+			each val in ["новое в блогах", "популярное в блогах"]
+				a(href='#').experts__blogs-item
+					+articles-title('red')!= val
+					.experts__date.articles__text-xs 27.12.2016
+					.experts__name
+						.experts__name-title.articles__text-sm._gray эксперт:
+						.experts__name-value.articles__text-md._valencia ИмяИмя
+					+article-views()
+					.experts__type.articles__text-sm._gray юридические консультации
+					.articles__title-md «Что делать строительному бизнесу в регионах в связи с вступлением в силу ФЗ-372?»
+					p Одним из самых серьезных изменений в системе российского строительного саморегулирования стала норма, которая предписала строительным организациям и предпринимателям быть членами СРО, зарегистрированных в том же субъекте. Напомним, изменения продиктованы Федеральным законом от 03.07.2016 № 372-ФЗ...
+		.experts__specialists
+			-var i = 0
+			while i < 2
+				a(href='#').experts__specialists-item
+					.experts__specialists-header.clearfix
+						img(src='img/specialist.jpg', alt='specialist')
+						.experts__specialists-name.articles__title-md._valencia._reg Имя Имя
+						.experts__specialists-position.articles__text-sm._bold генеральный директор «север стройсталь»
+					p Одним из самых серьезных изменений в системе российского строительного саморегулирования стала норма, которая пред
+					+article-views()
+					.articles__text-xs._rob 27.12.2016
+				-i++

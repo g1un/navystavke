@@ -1,5 +1,11 @@
-mixin articles-title()
-	h3.articles__title-lg
-		block
-		a(href='#').arrows
-	br
+mixin articles-title(type)
+	if(type == 'red')
+		h4.articles__title-sm
+			span.text
+				block
+			span.line
+	else
+		h3.articles__title-lg
+			block
+			a(href='#').arrows
+		br

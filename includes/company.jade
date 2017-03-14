@@ -1,0 +1,13 @@
+include articles-title
+
+mixin company()
+	.company
+		+articles-title() стенд компании
+		.company__item
+			img(src='img/company-logo.jpg', alt='company-logo')
+			.company__text
+				.company__title.articles__title-md._valencia._reg._ttu ООО «САЛОН КАМИНОВ»
+				p Уникальная возможность получить исчерпывающую информацию в короткий срок.Бесплатные мастер-классы, семинары.<br>
+					|Удобство расположения: 50 метров от ст. метро Спортивная.
+		.company__banner
+			img(src='img/company-banner.jpg', alt='company-banner')
