@@ -19,6 +19,15 @@
 }
 
 @font-face {
+	font-family: MyriadPro-BoldCond;
+	src: url(../fonts/MyriadPro-BoldCond.otf);
+	font-weight: normal;
+}
+@mixin font-mp-bold-cond() {
+	font-family: MyriadPro-BoldCond, sans-serif;
+}
+
+@font-face {
 	font-family: CenturyGothic;
 	src: url(../fonts/CenturyGothic.ttf);
 	font-weight: normal;

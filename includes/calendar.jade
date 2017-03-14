@@ -1,0 +1,27 @@
+mixin calendar()
+	.calendar
+		.calendar__title.clearfix
+			.calendar__title-left календарь <br>выставок
+			.calendar__title-year 2017
+		.calendar__months
+			.calendar__months-list
+				each val in ['январь', '', '', 'февраль']
+					.calendar__months-item!= val
+			.calendar__slider.js-calendar-slider
+			.calendar__load
+				-var i = 0
+				while i < 13
+					.calendar__load-item
+						a(href='#').calendar__load-bar
+					-i++
+		.calendar__week
+			.calendar__week-header
+				each val in ["Вс 8", "Пн 9", "Вт 10", "Ср 11", "Чт 12", "Пт 13", "Сб 14", "Вс 15"]
+					.calendar__week-day
+						span!= val
+			.calendar__week-content
+				.calendar__week-line
+					.calendar__week-event._start-3._end-9
+
+
+

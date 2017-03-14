@@ -9,9 +9,16 @@
 		vertical-align: top;
 		width: 48.7%;
 		margin-right: 2.6%;
+		text-decoration: none;
 
 		&:nth-child(2n) {
 			margin-right: 0;
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			margin-bottom: 5px;
 		}
 	}
 }

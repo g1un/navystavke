@@ -1,0 +1,95 @@
+.calendar {
+
+	&__title {
+		margin-bottom: 17px;
+		display: inline-block;
+		vertical-align: top;
+		padding: 8px;
+		background: #d44133;
+		color: #fff;
+
+		&-left {
+			float: left;
+			margin-right: 14px;
+			@include font-mp-reg();
+			font-size: 21px;
+			line-height: 1em;
+		}
+		
+		&-year {
+			float: right;
+			@include font-roboto-reg();
+			font-size: 42px;
+			line-height: 1;
+		}
+	}
+
+	&__months {
+
+		&-list {
+			background: #e3e3e3;
+			font-size: 0;
+		}
+
+		&-item {
+			display: inline-block;
+			vertical-align: middle;
+			width: 25%;
+			box-sizing: border-box;
+			border-right: 1px dashed #868686;
+			padding: 0 15px;
+			height: 30px;
+			@include font-mp-reg();
+			font-size: 14px;
+			line-height: 30px;
+			color: #868686;
+
+			&:nth-child(1) {
+				text-align: right;
+			}
+
+			&:nth-child(4) {
+				border: none;
+			}
+		}
+	}
+
+	&__slider {
+
+		&.ui-rangeSlider {
+			padding: 0 3px;
+			box-sizing: border-box;
+			height: 12px;
+			background: #e3e3e3;
+		}
+
+		.ui-rangeSlider-container {
+			margin: 0;
+			height: auto;
+		}
+
+		.ui-rangeSlider-innerBar {
+			height: 10px;
+			border: 1px solid #dcdcdc;
+			border-radius: 5px;
+			background: #fff;
+		}
+
+		.ui-rangeSlider-bar,
+		.ui-rangeSlider-arrow {
+			display: none;
+		}
+
+		.ui-rangeSlider-handle {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: #8d1d1d;
+			cursor: pointer;
+		}
+
+		.ui-rangeSlider-label {
+
+		}
+	}
+}

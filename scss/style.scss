@@ -1,7 +1,8 @@
 //plugins
 @import "plugins/normalize";
 @import "plugins/slick";
-//@import "plugins/jquery-ui.min";
+@import "plugins/jquery-ui.min";
+@import "plugins/iThing-min";
 
 //base
 @import 'components/fonts';
@@ -27,7 +28,7 @@
 //@import "components/frame";
 @import "components/header";
 @import "components/controls";
-//@import "components/footer";
+@import "components/footer";
 @import "components/logo";
 @import "components/aside";
 @import "components/up-slider";
@@ -47,6 +48,8 @@
 @import "components/tenders";
 @import 'components/company';
 @import 'components/video';
+@import 'components/calendar';
+@import 'components/link-banner';
 //@import "components/nav";
 //@import "components/lang";
 //@import 'components/social';

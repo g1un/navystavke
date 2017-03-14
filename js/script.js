@@ -49,9 +49,18 @@ $(document).ready(function() {
 
 		//slick
 		for(var i = 0; i < $slider.length; i++) {
-			console.log(getOptions($slider[i]));
 			$($slider[i]).slick(getOptions($slider[i]));
 		}
+	})();
+
+	//calendar slider
+	(function() {
+
+		//cache Dom
+		var $el = $('.js-calendar-slider');
+
+		$el.dateRangeSlider();
+		console.log('fere');
 	})();
 
 });

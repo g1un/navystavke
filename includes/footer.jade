@@ -1,9 +1,30 @@
+include logo
+
 mixin footer()
 	footer.footer
+		.container.footer__wrapper
+			ul.footer__menu
+				each val in ["о проекте", "контакты", "вакансии", "пользовательское соглашение"]
+					li.footer__item
+						a(href='#').footer__link!= val
+			ul.footer__menu
+				each val in ["организация выставки", "партнерам", "реклама на сайте"]
+					li.footer__item
+						a(href='#').footer__link!= val
+			ul.footer__menu
+				each val in ["выставки", "войти", "зарегистрироваться"]
+					li.footer__item
+						a(href='#').footer__link!= val
+			.footer__info
+				+logo().footer__logo
+				.footer__years © 2008-2017
+				.footer__license свидетельство ЭЛ № ФС 77 - 67998
+
 
 	script(src='js/jquery-3.0.0.min.js')
-	//script(src='js/jquery-ui.min.js')
 	script(src='js/slick.min.js')
+	script(src='js/jquery-ui.min.js')
+	script(src='js/jQDateRangeSlider-min.js')
 	//script(src='js/TweenMax.js')
 	//script(src='js/ScrollMagic.js')
 	//script(src='js/debug.addIndicators.js')
