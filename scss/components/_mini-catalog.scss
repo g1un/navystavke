@@ -1,6 +1,5 @@
 .mini-catalog {
 	padding: 8px 5px 3px 4px;
-	width: 370px;
 	box-sizing: border-box;
 	background: #ebebeb;
 	font-size: 0;
@@ -12,7 +11,11 @@
 		margin-bottom: 5px;
 
 		&:nth-child(7n) {
-			margin: 0;
+			margin-right: 0;
+		}
+
+		&:nth-child(n+22) {
+			display: none;
 		}
 	}
 
@@ -23,5 +26,43 @@
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
+	}
+
+	@media (max-width: 1279px) {
+
+		&__item {
+
+			&:nth-child(7n) {
+				margin-right: 4px;
+			}
+
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+
+			&:nth-child(n+13) {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: 1023px) {
+		padding: 8px 4px 3px 3px;
+
+		&__item {
+
+			&:nth-child(7n),
+			&:nth-child(4n) {
+				margin-right: 4px;
+			}
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+
+			&:nth-child(n+10) {
+				display: none;
+			}
+		}
 	}
 }

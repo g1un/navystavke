@@ -9,6 +9,7 @@
 		vertical-align: top;
 		width: 48.7%;
 		margin-right: 2.6%;
+		margin-bottom: 10px;
 		text-decoration: none;
 
 		&:nth-child(2n) {
@@ -17,8 +18,33 @@
 
 		img {
 			display: block;
-			max-width: 100%;
+			width: 100%;
 			margin-bottom: 5px;
+		}
+	}
+
+	@media (max-width: 1279px) {
+
+		&__item {
+			width: 100%;
+			margin-right: 0;
+
+			p {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: 1023px) {
+		margin-bottom: 40px;
+
+		&__item {
+			width: 48.7%;
+			margin-right: 2.6%;
+
+			p {
+				display: block;
+			}
 		}
 	}
 }

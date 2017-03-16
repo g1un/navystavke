@@ -1,5 +1,9 @@
 .info-slider {
-	margin: 0 -7px 8px;
+	margin-bottom: 8px;
+
+	&__list {
+		margin: 0 -7px;
+	}
 
 	&__item {
 		display: block;
@@ -75,6 +79,10 @@
 		&-down {
 			padding-top: 10px;
 			border-top: 1px solid #fff;
+
+			p {
+				line-height: 1.2em;
+			}
 		}
 	}
 
@@ -116,6 +124,130 @@
 
 		&._next {
 			right: 21px;
+		}
+	}
+
+	&__more {
+		display: none;
+	}
+
+	@media (max-width: 1023px) {
+		margin-bottom: 14px;
+
+		&__bg {
+			height: 207px;
+
+			&:hover {
+
+				.info-slider {
+
+					&__text {
+						top: 40px;
+					}
+				}
+			}
+		}
+
+		&__text {
+			left: 16px;
+
+			p {
+				font-size: 19px;
+			}
+		}
+
+		.slider-nav {
+			width: 11px;
+			height: 11px;
+			top: 96px;
+			margin: 0;
+
+			&._prev {
+				left: 13px;
+			}
+
+			&._next {
+				right: 13px;
+			}
+		}
+	}
+
+	@media (max-width: 799px) {
+		margin: 0 0 16px;
+
+		&__list{
+			margin: 0;
+			font-size: 0;
+		}
+
+		&__item {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0;
+			width: 48.3%;
+			margin-right: 3.4%;
+			margin-bottom: 4px;
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+
+			&:nth-child(n+5) {
+				display: none;
+			}
+		}
+
+		&__bg {
+			height: 180px;
+		}
+
+		&__text {
+			right: 22px;
+			margin-top: -50px;
+			padding-top: 13px;
+
+			&-up {
+				height: 37px;
+				padding-bottom: 0;
+			}
+
+			span {
+				font-size: 10px;
+			}
+
+			p {
+				font-size: 17px;
+				line-height: 1.2em;
+			}
+		}
+
+		&__more {
+			display: block;
+			text-align: center;
+			margin-top: 2px;
+
+			a {
+				display: inline-block;
+				vertical-align: top;
+				height: 21px;
+				box-sizing: border-box;
+				border: 1px solid #d0d0d0;
+				border-radius: 10px;
+				min-width: 100px;
+				padding: 0 10px;
+				@include font-mp-reg();
+				font-size: 16px;
+				line-height: 19px;
+				color: #666;
+				text-decoration: none;
+				
+				&:hover,
+				&:focus {
+					background: #d44133;
+					border-color: #d44133;
+					color: #fff;
+				}
+			}
 		}
 	}
 }

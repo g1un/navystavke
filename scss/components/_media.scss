@@ -129,10 +129,47 @@
 
 		&-image {
 			float: right;
-			max-width: 252px;
+			width: 252px;
+			max-width: 100%;
+			text-align: right;
 
 			img {
 				max-width: 100%;
+			}
+		}
+	}
+
+	@media (max-width: 1279px) {
+
+		&__subscribe {
+
+			&-buttons {
+
+				a {
+					display: block;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 1023px) {
+
+		&__subscribe {
+
+			&-image {
+				width: 334px;
+			}
+		}
+	}
+
+	@media (max-width: 799px) {
+
+		&__subscribe {
+
+			&-image {
+				float: none;
+				width: auto;
+				margin-left: 180px;
 			}
 		}
 	}

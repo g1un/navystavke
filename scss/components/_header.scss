@@ -83,4 +83,30 @@
 			color: #fff;
 		}
 	}
+
+	@media (max-width: 1023px) {
+
+		&__up {
+			justify-content: center;
+		}
+
+		&__enter {
+			margin-left: 58px;
+		}
+	}
+
+	@media (max-width: 799px) {
+
+		&__up {
+			justify-content: flex-start;
+		}
+
+		&__enter {
+			margin: 0 0 0 78px;
+		}
+
+		&__participate {
+			display: none;
+		}
+	}
 }

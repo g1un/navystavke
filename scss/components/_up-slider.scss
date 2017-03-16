@@ -3,23 +3,49 @@
 
 	&__item {
 		font-size: 0;
+
+		img {
+			max-width: 100%;
+		}
 	}
 
 	.slider-nav {
+		width: 14px;
+		height: 14px;
 
 		&._prev {
 			top: 22px;
 			right: 35px;
 			left: auto;
-			width: 14px;
-			height: 14px;
 		}
 
 		&._next {
 			top: 22px;
 			right: 16px;
-			width: 14px;
-			height: 14px;
 		}
+	}
+
+	@media (max-width: 1023px) {
+		margin-bottom: 19px;
+
+		.slider-nav {
+			height: 8px;
+			width: 8px;
+			border-width: 2px;
+
+			&._prev {
+				top: 17px;
+				right: 20px;
+			}
+
+			&._next {
+				top: 17px;
+				right: 9px;
+			}
+		}
+	}
+
+	@media (max-width: 799px) {
+		display: none;
 	}
 }

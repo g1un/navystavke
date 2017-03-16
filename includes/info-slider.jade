@@ -1,16 +1,19 @@
 mixin info-slider()
-	#info-slider.info-slider.js-slider(data-slides='4')
-		each val, index in ['_allports', '_cerulean', '_sushi', '_tree-poppy', '_allports', '_cerulean', '_sushi']
-			a(href='#').info-slider__item.js-slider-item
-				.info-slider__bg(style='background-image: url(img/info-slider-#{index % 4 + 1}.jpg)')
-					.info-slider__text(class='#{val}')
-						.info-slider__text-up
-							span ювелирные выставки
-							p Самоцветы
-						.info-slider__text-down
-							p Санкт-Петербург Невские берега 2017
-				ul.info-slider__statistics
-					each val in ['views', 'experts', 'participants']
-						li.info-slider__statistics-item
-							img(src='../img/svg/#{val}.svg')
-							|9999
+	.info-slider
+		#info-slider.info-slider__list.js-slider(data-slides='4')
+			each val, index in ['_allports', '_cerulean', '_sushi', '_tree-poppy', '_allports', '_cerulean', '_sushi']
+				a(href='#').info-slider__item.js-slider-item
+					.info-slider__bg(style='background-image: url(img/info-slider-#{index % 4 + 1}.jpg)')
+						.info-slider__text(class='#{val}')
+							.info-slider__text-up
+								span ювелирные выставки
+								p Самоцветы
+							.info-slider__text-down
+								p Санкт-Петербург Невские берега 2017
+					ul.info-slider__statistics
+						each val in ['views', 'experts', 'participants']
+							li.info-slider__statistics-item
+								img(src='../img/svg/#{val}.svg')
+								|9999
+		.info-slider__more
+			a(href='#') еще

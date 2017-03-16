@@ -2,23 +2,27 @@ include logo
 
 mixin footer()
 	footer.footer
-		.container.footer__wrapper
-			ul.footer__menu
-				each val in ["о проекте", "контакты", "вакансии", "пользовательское соглашение"]
-					li.footer__item
-						a(href='#').footer__link!= val
-			ul.footer__menu
-				each val in ["организация выставки", "партнерам", "реклама на сайте"]
-					li.footer__item
-						a(href='#').footer__link!= val
-			ul.footer__menu
-				each val in ["выставки", "войти", "зарегистрироваться"]
-					li.footer__item
-						a(href='#').footer__link!= val
-			.footer__info
-				+logo().footer__logo
-				.footer__years © 2008-2017
-				.footer__license свидетельство ЭЛ № ФС 77 - 67998
+		.container-l
+			.footer__wrapper.clearfix
+				.footer__ornament
+					img(src='../img/svg/romashka.svg').footer__ornament-left
+					img(src='../img/svg/romashka.svg').footer__ornament-right
+				ul.footer__menu
+					each val in ["о проекте", "контакты", "вакансии", "пользовательское соглашение"]
+						li.footer__item
+							a(href='#').footer__link!= val
+				ul.footer__menu
+					each val in ["организация выставки", "партнерам", "реклама на сайте"]
+						li.footer__item
+							a(href='#').footer__link!= val
+				ul.footer__menu
+					each val in ["выставки", "войти", "зарегистрироваться"]
+						li.footer__item
+							a(href='#').footer__link!= val
+				.footer__info
+					+logo().footer__logo
+					.footer__years © 2008-2017
+					.footer__license свидетельство ЭЛ № ФС 77 - 67998
 
 
 	script(src='js/jquery-3.0.0.min.js')

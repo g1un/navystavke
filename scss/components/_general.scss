@@ -20,6 +20,7 @@ body {
 
 body {
 	padding: 45px 0 0;
+	//min-width: 450px;
 	position: relative;
 }
 
@@ -29,10 +30,22 @@ body {
 	width: 1280px;
 	box-sizing: border-box;
 	padding: 0 11px 0 13px;
+
+	@media (max-width: 1279px) {
+		width: 100%;
+	}
 }
 
 .container-l {
 	padding: 0 11px 0 88px;
+
+	@media (max-width: 1023px) {
+		padding-left: 81px;
+	}
+
+	@media (max-width: 799px) {
+		padding: 0 14px;
+	}
 }
 
 .clearfix::after {

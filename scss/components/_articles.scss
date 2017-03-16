@@ -175,6 +175,10 @@
 	&__link {
 		display: block;
 		line-height: 0;
+
+		img {
+			width: 100%;
+		}
 	}
 
 	//basic
@@ -203,5 +207,26 @@
 	._rob {
 
 		@include font-roboto-reg();
+	}
+
+	@media (max-width: 1279px) {
+
+		&__left {
+			width: 50%;
+		}
+
+		&__right {
+			width: 50%;
+			padding-left: 5px;
+		}
+	}
+
+	@media (max-width: 1023px) {
+
+		&__left,
+		&__right {
+			display: block;
+			width: 100%;
+		}
 	}
 }

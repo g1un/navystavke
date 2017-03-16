@@ -1,11 +1,11 @@
 mixin register()
 	.register(class=attributes.class)
-		.register__text
-			h3 стать участником <br>или посетить выставку<br> просто:
-			p НаВыставке.ru – это удобный, информативный и всегда актуальный навигатор, охватывающий все выставки текущего года. На ресурсе наиболее полно представлены выставки в Москве и Санкт-Петербурге.
 		form(action='#', method='get').register__form
-			-var i = 'register'
-			.register__form-left
+			.register__text
+				h3 стать участником <br>или посетить выставку<br> просто:
+				p НаВыставке.ru – это удобный, информативный и всегда актуальный навигатор, охватывающий все выставки текущего года. На ресурсе наиболее полно представлены выставки в Москве и Санкт-Петербурге.
+				-var i = 'register'
+			.register__form-inputs
 				.register__social
 					p войти через соц сети
 					ul.register__social-list
@@ -21,7 +21,7 @@ mixin register()
 					label.register__label._email
 						input(type='text', name='#{i}-email', id='#{i}-email').register__input
 						img(src='../img/svg/email.svg')
-			.register__form-right
+			.register__form-end
 				.register__captcha
 					input(type='checkbox', name='#{i}-captcha', id='#{i}-captcha').register__captcha-input
 					label(for='#{i}-captcha').register__captcha-label
