@@ -1,11 +1,11 @@
 include logo
 
 mixin aside()
-	.aside.js-aside
+	.aside._hover-on.js-aside
 		.aside__header
-			.aside__close
+			.aside__close.js-aside-close
 			+logo().aside__logo._grey
-		.aside__wrapper
+		.aside__wrapper.js-aside-wrapper
 			.aside__promo
 				a(href='#').aside__promo-link
 					img(src='../img/svg/flowers.svg')
@@ -43,18 +43,18 @@ mixin aside()
 							}
 						]
 					each val in list
-						li.aside__item
+						li.aside__item.js-aside-item
 							.aside__item-wrapper
 								img(src='../img/svg/#{val.img}.svg')
 								h4!= val.title
-								.aside__exhibitions
+								.aside__exhibitions.js-aside-exhibition
 									each value in ['1', '2', '3']
 										a(href='#')
 											img(src='img/building.jpg', alt='building')
 											h5!= val.title + value
 											span с 23.05.2017
 							.aside__item-triangle
-			.aside__down
+			.aside__down.js-aside-down
 				a(href='#').aside__down-link
 					img(src='img/jewellery.jpg', alt='jewellery')
 					h4 ювелирная выставка

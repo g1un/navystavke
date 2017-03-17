@@ -8,15 +8,29 @@ $(document).ready(function() {
 		var $document = $(document);
 		var $header = $document.find('.header');
 		var $aside = $document.find('.js-aside');
+		var $footer = $document.find('.footer');
+		var $down = $aside.find('.js-aside-down');
+		var $wrapper = $aside.find('.js-aside-wrapper');
 
 		fixAside();
 
 		//bind events
 		$window.scroll(fixAside);
+		$window.resize(fixAside);
+		$down.hover(removeHover, addHover);
 
 		//fixAside
 		function fixAside() {
 			var windowScroll = $window.scrollTop();
+
+			//footer
+			var footerHeight = $footer.height();
+			var windowHeight = $window.height();
+			var docHeight = $document.height();
+
+			bottomAside(windowHeight, windowScroll, docHeight, footerHeight);
+
+			//header
 			var headerHeight = $header.height();
 			var asideTop = 116; //css top
 
@@ -24,6 +38,97 @@ $(document).ready(function() {
 				$aside.removeClass('_fixed');
 			} else {
 				$aside.addClass('_fixed');
+			}
+		}
+
+		//bottomAside
+		function bottomAside(windowHeight, windowScroll, docHeight, footerHeight) {
+			if($window.width() < 800) return;
+
+			//padding
+			var downBottom = $down[0].getBoundingClientRect().bottom;
+			var paddingBottom = windowHeight - downBottom;
+
+			if((windowScroll + windowHeight + 20) >= (docHeight - footerHeight)) {
+				if($aside.hasClass('_bottomed')) return;
+				$aside.addClass('_bottomed');
+				$aside.css({
+					'top': 'auto',
+					'bottom': footerHeight + 20 + 'px',
+					'z-index': '1',
+					'padding-bottom': paddingBottom + 'px'
+				});
+			} else {
+				$aside.removeClass('_bottomed');
+				$aside.removeAttr('style');
+			}
+		}
+
+		//removeHover
+		function removeHover(e) {
+			$aside.removeClass('_hover-on');
+		}
+
+		//addHover
+		function addHover(e) {
+			$aside.addClass('_hover-on');
+		}
+	})();
+
+	//aside links
+	(function() {
+
+		//cache Dom
+		var $doc = $(document);
+		var $item = $doc.find('.js-aside-item');
+		var $exhibition = $item.find('.js-aside-exhibtion');
+
+		//bind events
+		$item.on('touchend', toggleExhibition);
+		$doc.on('touchstart', hideExhibition);
+
+		//toggleExhibition
+		function toggleExhibition(e) {
+			e.preventDefault();
+			var $clicked = $(e.target);
+			if(!$clicked.closest('.js-aside-exhibtion').length) {
+				$exhibition.toggle();
+			}
+		}
+
+		//hideExhibition
+		function hideExhibition(e) {
+			var $clicked = $(e.target);
+			if(!$clicked.closest('.js-aside-exhibtion').length) {
+				$exhibition.hide();
+			}
+		}
+	})();
+
+	//sandwich
+	(function() {
+
+		//cache Dom
+		var $doc = $(document);
+		var $sandwich = $doc.find('.js-sandwich');
+		var $aside = $doc.find('.js-aside');
+		var $close = $aside.find('.js-aside-close');
+
+		//bind events
+		$sandwich.on('click', showMenu);
+		$close.on('click', hideMenu);
+		$doc.on('touchstart', hideMenu);
+
+		//showMenu
+		function showMenu() {
+			$aside.addClass('_show');
+		}
+
+		//hideMenu
+		function hideMenu(e) {
+			var $clicked = $(e.target);
+			if(!$clicked.closest('.js-aside').length || $clicked.hasClass('js-aside-close')) {
+				$aside.removeClass('_show');
 			}
 		}
 	})();
@@ -150,5 +255,4 @@ $(document).ready(function() {
 			$input.focus();
 		}
 	})();
-
 });
