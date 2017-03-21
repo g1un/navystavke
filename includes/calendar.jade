@@ -7,21 +7,59 @@ mixin calendar()
 			.calendar__months-list
 				each val in ['январь', '', '', 'февраль']
 					.calendar__months-item!= val
-			.calendar__slider.js-calendar-slider
+			.calendar__slider
+				.js-calendar-slider
 			.calendar__load
+				.calendar__load-columns
+					-var j = 0
+					while j < 4
+						.calendar__load-column
+						-j++
 				-var i = 0
-				while i < 13
-					.calendar__load-item
-						a(href='#').calendar__load-bar
-					-i++
+				.calendar__load-items
+					while i < 13
+						.calendar__load-item
+							a(href='#').calendar__load-bar
+						-i++
 		.calendar__week
 			.calendar__week-header
-				each val in ["Вс 8", "Пн 9", "Вт 10", "Ср 11", "Чт 12", "Пт 13", "Сб 14", "Вс 15"]
-					.calendar__week-day
+				each val, index in ["Вс <i>8</i>", "Пн <i>9</i>", "Вт <i>10</i>", "Ср <i>11</i>", "Чт <i>12</i>", "Пт <i>13</i>", "Сб <i>14</i>", "Вс <i>15</i>", "Пн <i>16</i>"]
+					.calendar__week-day(class='#{index == 2 ? "_active" : ""}')
 						span!= val
 			.calendar__week-content
-				.calendar__week-line
-					.calendar__week-event._start-3._end-9
-
-
-
+				-
+					var list = [
+						{
+							"title": "SMIT: 60 minutes in tomorrow 2017, Центр современного искусства",
+							"place": 3
+						},
+						{
+							"title": "Меховая Выставка-Продажа, Крокус-Экспо",
+							"place": 4
+						},
+						{
+							"title": "Junwex Петербург. 2017, Экспофорум",
+							"place": 6
+						},
+						{
+							"title": "Aquaterm MOSCOW 2017, Крокус-Экспо",
+							"place": 3
+						},
+						{
+							"title": "«Молодые профессионалы — 2017» Пермского края, Пермская ярмарка",
+							"place": 3
+						},
+						{
+							"title": "АгроФарм 2",
+							"place": 9
+						}
+					]
+				each val in list
+					.calendar__week-line
+						a.calendar__week-event(href='#', class="_start-#{val.place}").js-calendar-tooltip!= val.title
+							.event-tooltip.js-calendar-tooltip-data(style='display: none;')
+								.event-tooltip__date 05-30 #[span февраля]
+								.event-tooltip__name Ювелирная выставка
+								.event-tooltip__place.clearfix
+									img(src='../img/svg/junewex.svg')
+									span Junwex Петербург. 2017, <br>Экспофорум

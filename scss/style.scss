@@ -3,10 +3,12 @@
 @import "plugins/slick";
 @import "plugins/jquery-ui.min";
 @import "plugins/iThing-min";
+@import "plugins/tooltip/jquery-ui.min";
 
 //base
 @import 'components/fonts';
 @import 'components/general';
+@import 'components/sprite';
 //@import 'components/btn';
 //@import 'components/select';
 //@import 'components/typography';
@@ -50,6 +52,7 @@
 @import 'components/video';
 @import 'components/calendar';
 @import 'components/link-banner';
+@import 'components/event-tooltip';
 //@import "components/nav";
 //@import "components/lang";
 //@import 'components/social';

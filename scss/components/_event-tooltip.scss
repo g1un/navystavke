@@ -1,0 +1,59 @@
+.event-tooltip {
+	padding: 15px;
+	border: 1px solid #b0b0b0;
+	border-radius: 11px;
+	background: #fff;
+	box-shadow: 0 3px 4px 0 rgba(0,0,0,.13);
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		margin-top: -1px;
+		left: 40px;
+		@include sprite($calendar-tooltip-angle);
+		@include font-mp-reg();
+	}
+	
+	&__wrapper {
+		padding: 0;
+		background: transparent;
+		border: none !important;
+		box-shadow: none;
+	}
+
+	&__date {
+		margin-bottom: 5px;
+		border-bottom: 1px solid #b9b8b8;
+		font-size: 34px;
+		line-height: 1em;
+		color: #d44133;
+
+		span {
+			font-size: 21px;
+		}
+	}
+
+	&__name {
+		margin-bottom: 5px;
+		font-size: 20px;
+		color: #000;
+	}
+	
+	&__place {
+		font-size: 18px;
+		color: #6f6f6f;
+
+		svg {
+			float: left;
+			margin-top: 5px;
+			max-width: 25px;
+		}
+
+		span {
+			display: block;
+			margin-left: 40px;
+		}
+	}
+}

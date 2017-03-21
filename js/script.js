@@ -195,10 +195,38 @@ $(document).ready(function() {
 	//calendar slider
 	(function() {
 
+		// options
+		var options = {
+			arrows: false,
+			bounds:
+			{
+				min: new Date(2017, 0, 9),
+				max: new Date(2017, 1, 5)
+			},
+			defaultValues:
+			{
+				min: new Date(2017, 0, 9),
+				max: new Date(2017, 1, 5)
+			},
+			range:{
+				min: {days: 1}
+			},
+			symmetricPositionning: true,
+			step:{
+				days: 1
+			},
+			formatter: function(val){
+				var days = val.getDate(),
+					month = val.getMonth() + 1,
+					year = val.getFullYear();
+				return days + "." + month + "." + year;
+			}
+		};
+
 		//cache Dom
 		var $el = $('.js-calendar-slider');
 
-		$el.dateRangeSlider();
+		$el.dateRangeSlider(options);
 	})();
 
 	//controls search
@@ -254,5 +282,39 @@ $(document).ready(function() {
 			$reset.removeClass('_show');
 			$input.focus();
 		}
+	})();
+
+	//calendar tooltip
+	(function() {
+
+		var options = {
+			items: '.js-calendar-tooltip',
+			content: function() {
+				var $this = $(this);
+				return $(this).find('.js-calendar-tooltip-data').clone().show();
+			},
+			position: {
+				my: "left bottom-16",
+				at: "left top"
+			},
+			classes: {
+				"ui-tooltip": "event-tooltip__wrapper js-event-tooltip-wrapper"
+			}
+		};
+
+		//cache Dom
+		var $tooltip = $('.js-calendar-tooltip');
+
+		//bind events
+		// $tooltip.hover(
+		// 	function() { console.log(this); $(this).tooltip(options) },
+		// 	function() { $(this).tooltip('destroy') }
+		// );
+		$tooltip.on('mouseenter', function() {
+			// console.log($tooltip.tooltip('option', 'position'));
+
+		});
+
+		$tooltip.tooltip(options);
 	})();
 });
