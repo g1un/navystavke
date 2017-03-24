@@ -17,7 +17,7 @@ mixin experts()
 		+tags(tagsList).experts__tags
 		.experts__blogs
 			each val in ["новое в блогах", "популярное в блогах"]
-				a(href='#').experts__blogs-item
+				.experts__blogs-item
 					+articles-title('red')!= val
 					.experts__date.articles__text-xs 27.12.2016
 					.experts__name
@@ -30,7 +30,7 @@ mixin experts()
 		.experts__specialists
 			-var i = 0
 			while i < 2
-				a(href='#').experts__specialists-item
+				.experts__specialists-item
 					.experts__specialists-header.clearfix
 						img(src='img/specialist.jpg', alt='specialist')
 						.experts__specialists-name.articles__title-md._valencia._reg Имя Имя
