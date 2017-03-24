@@ -29,8 +29,6 @@ $(document).ready(function() {
 			var windowHeight = $window.height();
 			var docHeight = $document.height();
 
-			bottomAside(windowHeight, windowScroll, docHeight, footerHeight);
-
 			//header
 			var headerHeight = $header.height();
 			var asideTop = 116; //css top
@@ -40,6 +38,8 @@ $(document).ready(function() {
 			} else {
 				$aside.addClass('_fixed');
 			}
+
+			bottomAside(windowHeight, windowScroll, docHeight, footerHeight);
 		}
 
 		//bottomAside
@@ -280,5 +280,35 @@ $(document).ready(function() {
 		});
 
 		$tooltip.tooltip(options);
+	})();
+
+	//calendar load and week
+	(function() {
+
+		//cache Dom
+		var $calendar = $('.js-calendar');
+		var $loadItem = $calendar.find('.js-calendar-load-item');
+		var $weekItem = $calendar.find('.js-calendar-week-item');
+
+		//bind events
+		$weekItem.hover(showLoad, hideLoad);
+
+		//showLoad
+		function showLoad() {
+			var index = getIndex(this);
+			$($($loadItem[index])).addClass('_active');
+		}
+
+		//hideLoad
+		function hideLoad() {
+			var index = getIndex(this);
+			$($($loadItem[index])).removeClass('_active');
+		}
+
+		//getIndex
+		function getIndex(_this) {
+			return $(_this).index('.js-calendar-week-item');
+		}
+
 	})();
 });

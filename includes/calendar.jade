@@ -1,5 +1,5 @@
 mixin calendar()
-	.calendar
+	.calendar.js-calendar
 		.calendar__title.clearfix
 			.calendar__title-left календарь <br>выставок
 			.calendar__title-year 2017
@@ -19,9 +19,9 @@ mixin calendar()
 						-j++
 				-var i = 0
 				.calendar__load-items
-					while i < 13
+					while i < 6
 						.calendar__load-item
-							a(href='#').calendar__load-bar
+							.calendar__load-bar.js-calendar-load-item
 						-i++
 		.calendar__week
 			.calendar__week-header
@@ -58,7 +58,7 @@ mixin calendar()
 					]
 				each val in list
 					.calendar__week-line
-						a.calendar__week-event(href='#', class="_start-#{val.place}").js-calendar-tooltip!= val.title
+						a.calendar__week-event(href='#', class="_start-#{val.place}").js-calendar-tooltip.js-calendar-week-item!= val.title
 							.event-tooltip.js-calendar-tooltip-data(style='display: none;')
 								.event-tooltip__date 05-30 #[span февраля]
 								.event-tooltip__name Ювелирная выставка

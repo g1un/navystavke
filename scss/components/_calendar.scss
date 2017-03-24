@@ -186,8 +186,7 @@
 			bottom: 1px;
 			background: #626262;
 			
-			&:hover,
-			&:focus {
+			&._active {
 				background: #d44133;
 			}
 		}
