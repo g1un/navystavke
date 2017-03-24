@@ -1,12 +1,12 @@
 include logo
 
 mixin aside()
-	.aside._hover-on.js-aside
+	.aside.js-aside
 		.aside__header
 			.aside__close.js-aside-close
 			+logo().aside__logo._grey
 		.aside__wrapper.js-aside-wrapper
-			.aside__promo
+			.aside__promo.js-aside-hover
 				a(href='#').aside__promo-link
 					img(src='../img/svg/flowers.svg')
 					h4 цветы и подарки
@@ -17,7 +17,7 @@ mixin aside()
 					a(href='#').aside__warning
 						img(src='../img/svg/warning.svg')
 						span последний день <br>выставка: «Камины»!
-			.aside__catalog
+			.aside__catalog.js-aside-hover
 				ul.aside__list
 					-
 						var list = [

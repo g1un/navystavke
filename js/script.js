@@ -11,13 +11,14 @@ $(document).ready(function() {
 		var $footer = $document.find('.footer');
 		var $down = $aside.find('.js-aside-down');
 		var $wrapper = $aside.find('.js-aside-wrapper');
+		var $hoverOnEls = $aside.find('.js-aside-hover');
 
 		fixAside();
 
 		//bind events
 		$window.scroll(fixAside);
 		$window.resize(fixAside);
-		$down.hover(removeHover, addHover);
+		$hoverOnEls.hover(addHover, removeHover);
 
 		//fixAside
 		function fixAside() {
