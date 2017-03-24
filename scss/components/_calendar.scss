@@ -44,6 +44,12 @@
 			font-size: 14px;
 			line-height: 30px;
 			color: #868686;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				background: #d8d8d8;
+			}
 
 			&:nth-child(1) {
 				text-align: right;
@@ -56,100 +62,77 @@
 	}
 
 	&__slider {
-		padding: 0 3px 8px;
+		padding: 0 11px 7px;
 		background: #e3e3e3;
+		position: relative;
 
-		.ui-rangeSlider {
-			padding: 0;
-		//	box-sizing: border-box;
-			height: 12px;
-		}
-		//
-		.ui-rangeSlider-container {
-			margin: 0;
-			height: auto;
-			border: none;
-		}
-		//
-		.ui-rangeSlider-innerBar {
+		&-bar {
 			height: 10px;
+			border-radius: 4px;
 			border: 1px solid #dcdcdc;
-			border-radius: 5px;
 			background: #fff;
-		}
-		
-		.ui-rangeSlider-bar {
-			margin: 0;
-			height: auto;
-			background: transparent;
-		}
-		
-		//.ui-rangeSlider-bar/*,
-		//.ui-rangeSlider-arrow*/ {
-		//	display: none;
-		//}
-		//
-		.ui-rangeSlider-handle {
-			width: 12px;
-			height: 12px;
-			border-radius: 50%;
-			background: #8d1d1d;
-			cursor: pointer;
-			//width: 30px;
-			//background-color: red;
-		}
+			position: relative;
 
-		.ui-rangeSlider-label {
-			bottom: 23px;
-			padding: 0;
-			border: none;
-			background: none;
-			box-shadow: none;
-
-			.ui-rangeSlider-label-value {
-				background: #fff;
-				border: 1px solid #dedede;
-				border-radius: 3px;
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: -1px;
 				height: 12px;
-				padding: 1px 10px;
-				@include font-mp-reg();
-				font-size: 11px;
-				line-height: 14px;
-				color: #000;
-				text-align: center;
+				width: 12px;
+				background: #8d1d1d;
+				border-radius: 50%;
+			}
+
+			&:before {
+				left: -9px;
+			}
+
+			&:after {
+				right: -9px;
 			}
 		}
 
-		.ui-rangeSlider-label-inner {
+		&-date {
 			position: absolute;
-			top: 15px;
-			z-index: 1;
-			width: 14px;
-			height: 9px;
-			border: none;
-			@include sprite ($calendar-angle);
+			top: -26px;
+			padding: 0 10px;
+			border: 1px solid #dedede;
+			border-radius: 3px;
+			background: #fff;
+			@include font-mp-reg();
+			font-size: 11px;
+			line-height: 14px;
+			color: #000;
+			text-align: center;
 
-		}
-
-		.ui-rangeSlider-leftLabel {
-
-			.ui-rangeSlider-label-inner {
-				left: 21px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 100%;
+				@include sprite($calendar-angle);
 			}
-		}
 
-		.ui-rangeSlider-rightLabel {
+			&._start {
+				left: 4px;
 
-			.ui-rangeSlider-label-inner {
-				left: auto;
-				right: 12px;
-				transform: scaleX(-1);
+				&:before {
+					left: 12px;
+				}
+			}
+
+			&._end {
+				right: 4px;
+
+				&:before {
+					right: 12px;
+					transform: scaleX(-1);
+				}
 			}
 		}
 	}
 
 	&__load {
-		margin-bottom: 15px;
 		padding-bottom: 4px;
 		background: #e3e3e3;
 		position: relative;

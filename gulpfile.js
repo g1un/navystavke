@@ -109,7 +109,7 @@ gulp.task('sprite', function () {
 
 gulp.task('watch', ['clean:js', 'browserSync', 'jade', 'sass', 'inline', 'scripts', 'svgmin', 'images', 'fonts', 'sprite'], function(){
     gulp.watch('**/*.scss', ['sass']);
-    gulp.watch('img/**/*.+(png|jpg|gif|svg)', ['images']);
+    gulp.watch('img/**/*.+(png|jpg|gif)', ['images']);
     gulp.watch('img/sprite/*', ['sprite']);
     gulp.watch('fonts/*', ['fonts']);
     gulp.watch('**/*.jade', function() {

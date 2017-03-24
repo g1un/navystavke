@@ -6,9 +6,11 @@ mixin calendar()
 		.calendar__months
 			.calendar__months-list
 				each val in ['январь', '', '', 'февраль']
-					.calendar__months-item!= val
+					a(href='#').calendar__months-item!= val
 			.calendar__slider
-				.js-calendar-slider
+				.calendar__slider-bar
+				.calendar__slider-date._start 09.01.2017
+				.calendar__slider-date._end 05.02.2017
 			.calendar__load
 				.calendar__load-columns
 					-var j = 0
